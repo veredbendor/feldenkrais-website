@@ -65,3 +65,34 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [08:30:35.477] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [08:30:35.477] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
 [08:30:35.477] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765257069017}
+[08:41:39.118] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:41:39.326] Browser WARN    Image with src "/images/feldenkrais-hands-on.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[08:41:39.326] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:41:39.326] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:41:39.326] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765257732876}
+[08:41:42.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:41:42.607] Browser WARN    Image with src "/images/feldenkrais-hands-on.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[08:41:42.607] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:41:42.607] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:41:42.607] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765257736157}
+[08:42:22.171] Server  LOG      ✓ Compiled in 0ms
+[08:43:13.245] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:43:13.399] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:43:13.399] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:43:13.399] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765257826951}
+[08:48:37.300] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:48:37.503] Browser WARN    Image with src "/images/feldenkrais-session-bg.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[08:48:37.503] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:48:37.503] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:48:37.503] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765258151058}
+[08:50:54.728] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:50:54.857] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:50:54.857] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:50:54.857] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765258288414}
+[08:52:37.542] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:52:37.669] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:52:37.669] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:52:37.669] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765258391228}
