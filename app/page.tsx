@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Logo className="h-10 w-10 text-primary" />
-            <span className="text-xl font-semibold">FELDENKRAIS®</span>
+            <span className="text-xl font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
@@ -25,18 +25,18 @@ export default function Home() {
             </a>
           </nav>
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="#book">Book a Session</a>
+            <a href="https://feldenkraisoi.setmore.com/book" target="_blank" rel="noopener noreferrer">Book a Session</a>
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-6 md:py-8">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Logo className="h-24 w-24 text-primary mx-auto" />
-            <h1 className="text-5xl md:text-7xl font-light tracking-tight text-balance">FELDENKRAIS®</h1>
-            <div className="space-y-3 text-xl md:text-2xl font-light text-muted-foreground">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <Logo className="h-16 w-16 text-primary mx-auto" />
+            <h1 className="text-4xl md:text-5xl font-light tracking-tight text-balance">FELDENKRAIS<sup className="text-lg">®</sup></h1>
+            <div className="space-y-1 text-lg md:text-xl font-light text-muted-foreground">
               <p className="text-balance">{"Reconnect with your organic intelligence."}</p>
               <p className="text-balance">{"Awaken ease. Restore balance."}</p>
               <p className="text-balance">{"Feel fully alive"}</p>
@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-secondary/30">
+      <section id="about" className="py-10 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -67,8 +67,8 @@ export default function Home() {
               </div>
               <div className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
-                  src="/images/screenshot-202025-12-08-20at-2010.png"
-                  alt="Peaceful meditation in nature"
+                  src="/images/feldenkrais-hands-on.png"
+                  alt="Feldenkrais hands-on session"
                   fill
                   className="object-cover"
                 />
@@ -79,18 +79,18 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-light text-center mb-12">{"Experience the benefits"}</h2>
+            <h2 className="text-3xl md:text-4xl font-light text-center mb-8">{"Experience the benefits"}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                "Gentle, hands-on guidance",
-                "Awareness-based movement",
-                "Reduced tension & improved posture",
-                "Support for nervous system regulation",
-                "More vitality and ease in daily life",
-                "Deep reconnection with your body",
+                "Improve posture and breathing",
+                "Reduce chronic pain and stiffness",
+                "Increase coordination and flexibility",
+                "Regulate your nervous system",
+                "Feel more vitality and ease daily",
+                "Enhance performance in dance, sports, and martial arts",
               ].map((benefit, index) => (
                 <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm">
                   <CardContent className="p-6 text-center">
@@ -104,10 +104,10 @@ export default function Home() {
       </section>
 
       {/* Offerings Section */}
-      <section id="offerings" className="py-16 md:py-24 bg-secondary/30">
+      <section id="offerings" className="py-10 md:py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-light text-center mb-12">{"Session details"}</h2>
+            <h2 className="text-3xl md:text-4xl font-light text-center mb-8">{"Session details"}</h2>
             <Card className="border-2 border-primary/20 bg-card shadow-lg">
               <CardContent className="p-8 md:p-12 space-y-8">
                 <div className="space-y-3">
@@ -136,7 +136,7 @@ export default function Home() {
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg"
                     asChild
                   >
-                    <a href="#book">{"Book Your Session"}</a>
+                    <a href="https://feldenkraisoi.setmore.com/book" target="_blank" rel="noopener noreferrer">{"Book Your Session"}</a>
                   </Button>
                 </div>
               </CardContent>
@@ -146,10 +146,10 @@ export default function Home() {
       </section>
 
       {/* Bio Section */}
-      <section id="bio" className="py-16 md:py-24">
+      <section id="bio" className="py-10 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-light text-center mb-12">{"About your practitioner"}</h2>
+            <h2 className="text-3xl md:text-4xl font-light text-center mb-8">{"About your practitioner"}</h2>
             <div className="grid md:grid-cols-[300px_1fr] gap-12 items-start">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto md:mx-0 w-full max-w-[300px]">
                 <Image
@@ -177,10 +177,10 @@ export default function Home() {
       </section>
 
       {/* Booking Section */}
-      <section id="book" className="py-16 md:py-24">
+      <section id="book" className="py-10 md:py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-light text-balance">{"Book your session"}</h2>
+          <div className="max-w-2xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-light text-balance">{"Book your session"}</h2>
             <Card className="border-2 border-primary/20 bg-card shadow-lg">
               <CardContent className="p-8 md:p-12 space-y-6">
                 <div className="flex flex-col items-center gap-6">
@@ -203,8 +203,8 @@ export default function Home() {
                 <div className="space-y-4 text-lg pt-6 border-t border-border">
                   <div className="p-4 rounded-lg bg-secondary/50">
                     <p className="text-muted-foreground">{"Email"}</p>
-                    <a href="mailto:your.email@example.com" className="text-primary hover:underline">
-                      {"your.email@example.com"}
+                    <a href="mailto:bendor.vered@gmail.com" className="text-primary hover:underline">
+                      {"bendor.vered@gmail.com"}
                     </a>
                   </div>
                 </div>
@@ -220,11 +220,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-12 bg-card/30">
+      <footer className="border-t border-border/50 py-8 bg-card/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Logo className="h-12 w-12 text-primary mx-auto" />
-            <p className="text-lg font-semibold">FELDENKRAIS®</p>
+            <p className="text-lg font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></p>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {"Reconnect with your organic intelligence. Awaken ease. Restore balance. Feel fully alive."}
             </p>

@@ -13,3 +13,55 @@
 [00:00:06.180] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [00:00:06.180] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
 [00:00:06.180] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765226439763}
+[02:05:17.172] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:17.291] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:05:17.291] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:05:17.291] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765233950843}
+[02:10:12.730] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:10:12.847] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:10:12.847] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:10:12.847] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765234246405}
+[02:14:44.629] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:14:44.741] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:14:44.741] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:14:44.741] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765234518303}
+[02:17:07.245] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:17:07.354] Browser WARN    Image with src "/images/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:17:07.354] Browser WARN    Image with src "/images/screenshot-202025-12-08-20at-2010.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:17:07.354] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:17:07.354] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:17:07.354] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765234660919}
+[02:18:40.689] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:40.799] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:18:40.799] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:18:40.799] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765234754366}
+[02:21:14.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:21:14.316] Browser WARN    Image with src "/images/feldenkrais-hands-on.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:21:14.316] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:21:14.316] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:21:14.316] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765234907884}
+[02:22:43.917] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:22:44.029] Browser WARN    Image with src "/images/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:22:44.029] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:22:44.029] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:22:44.029] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765234997587}
+[02:23:06.330] Server  LOG      ✓ Compiled in 46ms
+[02:23:06.545] Server  LOG      ✓ Compiled in 19ms
+[02:23:06.657] Server  LOG      ✓ Compiled in 20ms
+[02:24:19.706] Server  LOG      ✓ Compiled in 27ms
+[02:24:19.772] Server  LOG      ✓ Compiled in 20ms
+[08:28:50.555] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:28:50.680] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:28:50.680] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:28:50.680] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765256964215}
+[08:30:26.053] Server  LOG      ✓ Compiled in 24ms
+[08:30:35.364] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:30:35.477] Browser WARN    Image with src "/images/feldenkrais-hands-on.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[08:30:35.477] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:30:35.477] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[08:30:35.477] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3006/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3006/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765257069017}
