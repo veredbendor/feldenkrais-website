@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Logo } from "@/components/logo"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
             <span className="text-xl font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
+            <Link href="/workshop" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
+              Workshop
+            </Link>
             <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
               About
             </a>
@@ -39,6 +43,30 @@ export default function Home() {
             <p className="text-base md:text-lg font-light text-muted-foreground">
               Reconnect with your organic intelligence. Awaken ease. Restore balance. Feel fully alive.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Workshop Banner */}
+      <section id="workshop" className="py-6 bg-primary/5 border-y border-primary/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <Card className="border border-primary/20 bg-card shadow-md">
+              <CardContent className="p-5">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between">
+                  <div className="space-y-1">
+                    <p className="text-xs font-medium tracking-widest uppercase text-primary">Upcoming Workshop</p>
+                    <h2 className="text-xl md:text-2xl font-light">Release Your Neck & Shoulders</h2>
+                    <p className="text-sm text-muted-foreground">
+                      4 Thursdays starting March 5 &middot; 9–10 AM &middot; $20 drop-in &middot; Cotati Wellness Center
+                    </p>
+                  </div>
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap" asChild>
+                    <Link href="/workshop">Learn More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
