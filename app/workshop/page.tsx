@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Logo } from "@/components/logo"
 import Image from "next/image"
 import Link from "next/link"
+import { RegistrationForm } from "./registration-form"
 
 export const metadata: Metadata = {
   title: "Release Your Neck & Shoulders – Feldenkrais® Workshop Series",
@@ -33,7 +34,7 @@ export default function WorkshopPage() {
             </Link>
           </nav>
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="mailto:bendor.vered@gmail.com?subject=Neck%20%26%20Shoulders%20Workshop%20Registration">Register</a>
+            <a href="#register">Register</a>
           </Button>
         </div>
       </header>
@@ -100,12 +101,7 @@ export default function WorkshopPage() {
                         <p className="text-muted-foreground">Comfortable clothing. Mats provided.</p>
                       </div>
                     </div>
-                    <Button
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                      asChild
-                    >
-                      <a href="mailto:bendor.vered@gmail.com?subject=Neck%20%26%20Shoulders%20Workshop%20Registration">Register Now</a>
-                    </Button>
+                    <RegistrationForm />
                   </CardContent>
                 </Card>
               </div>
@@ -197,29 +193,21 @@ export default function WorkshopPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-10">
+      <section id="register" className="py-10">
         <div className="container mx-auto px-4">
-          <div className="max-w-md mx-auto text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-light">Ready to feel the difference?</h2>
-            <p className="text-base text-muted-foreground">
-              Space is limited. Register by email to reserve your spot.
+          <div className="max-w-sm mx-auto space-y-4">
+            <h2 className="text-2xl md:text-3xl font-light text-center">Ready to feel the difference?</h2>
+            <p className="text-base text-muted-foreground text-center">
+              Space is limited. Register to reserve your spot.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
-                asChild
-              >
-                <a href="mailto:bendor.vered@gmail.com?subject=Neck%20%26%20Shoulders%20Workshop%20Registration">Register Now</a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-              >
-                <a href="mailto:bendor.vered@gmail.com?subject=Neck%20%26%20Shoulders%20Workshop%20Question">Ask a Question</a>
-              </Button>
-            </div>
+            <Card className="border border-primary/20 bg-card shadow-md">
+              <CardContent className="p-5">
+                <RegistrationForm />
+              </CardContent>
+            </Card>
+            <p className="text-center text-sm text-muted-foreground">
+              Questions? <a href="mailto:bendor.vered@gmail.com?subject=Neck%20%26%20Shoulders%20Workshop%20Question" className="text-primary hover:underline">Email us</a>
+            </p>
           </div>
         </div>
       </section>
