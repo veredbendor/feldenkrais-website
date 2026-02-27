@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Release Your Neck & Shoulders – Feldenkrais® Workshop Series",
   description:
-    "A 4-week Feldenkrais Awareness Through Movement® workshop to relieve neck and shoulder tension. Thursdays 9-10 AM starting March 5, 2026 at Cotati Wellness Center.",
+    "A 4-week Feldenkrais Awareness Through Movement® workshop to relieve neck and shoulder tension. Thursdays 9-10 AM starting March 12, 2026 at Cotati Wellness Center.",
 }
 
 export default function WorkshopPage() {
@@ -79,7 +79,7 @@ export default function WorkshopPage() {
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">When</p>
                         <p className="font-medium">Thursdays, 9:00 – 10:00 AM</p>
-                        <p className="text-muted-foreground">March 5, 12, 19, 26, 2026</p>
+                        <p className="text-muted-foreground">March 12, 19, 26 &amp; April 2, 2026</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">Where</p>
@@ -121,10 +121,10 @@ export default function WorkshopPage() {
             <h2 className="text-2xl md:text-3xl font-light text-center mb-6">The 4 sessions</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { week: "Week 1", date: "March 5", title: "Organizing from Your Center", desc: "Discover how your whole body supports your neck — building awareness of the connections between your center and your head." },
-                { week: "Week 2", date: "March 12", title: "Restoring Mobility", desc: "Gently explore the full range of your neck and shoulders, finding where movement has become restricted and inviting it to open." },
-                { week: "Week 3", date: "March 19", title: "Softening the Shoulders", desc: "Learn to let go of habitual shoulder tension through movements that connect your arms, shoulders, and spine." },
-                { week: "Week 4", date: "March 26", title: "Rediscovering Ease", desc: "Integrate the lessons of the series into a felt sense of lightness, freedom, and new postural possibilities." },
+                { week: "Week 1", date: "March 12", title: "Organizing from Your Center", desc: "Discover how your whole body supports your neck — building awareness of the connections between your center and your head." },
+                { week: "Week 2", date: "March 19", title: "Restoring Mobility", desc: "Gently explore the full range of your neck and shoulders, finding where movement has become restricted and inviting it to open." },
+                { week: "Week 3", date: "March 26", title: "Softening the Shoulders", desc: "Learn to let go of habitual shoulder tension through movements that connect your arms, shoulders, and spine." },
+                { week: "Week 4", date: "April 2", title: "Rediscovering Ease", desc: "Integrate the lessons of the series into a felt sense of lightness, freedom, and new postural possibilities." },
               ].map((session, index) => (
                 <Card key={index} className="border-border/50 bg-card">
                   <CardContent className="p-5">

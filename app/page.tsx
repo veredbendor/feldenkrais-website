@@ -58,7 +58,7 @@ export default function Home() {
                     <p className="text-xs font-medium tracking-widest uppercase text-primary">Upcoming Workshop</p>
                     <h2 className="text-xl md:text-2xl font-light">Release Your Neck & Shoulders</h2>
                     <p className="text-sm text-muted-foreground">
-                      4 Thursdays starting March 5 &middot; 9–10 AM &middot; $20 drop-in &middot; Cotati Wellness Center
+                      4 Thursdays starting March 12 &middot; 9–10 AM &middot; $20 drop-in &middot; Cotati Wellness Center
                     </p>
                   </div>
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap" asChild>
