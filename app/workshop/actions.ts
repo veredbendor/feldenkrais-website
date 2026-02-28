@@ -2,8 +2,6 @@
 
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function registerForWorkshop(formData: FormData) {
   const name = formData.get("name") as string
   const email = formData.get("email") as string
@@ -11,6 +9,8 @@ export async function registerForWorkshop(formData: FormData) {
   if (!name || !email) {
     return { error: "Name and email are required." }
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
   try {
     await resend.emails.send({
