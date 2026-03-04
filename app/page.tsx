@@ -143,17 +143,17 @@ export default function Home() {
                 <div className="space-y-2">
                   <h3 className="text-base font-semibold">{"Private Sessions"}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Personalized, one-on-one sessions tailored to your needs—reducing pain, improving posture, or feeling more at ease in your body.
+                    Personalized, one-on-one sessions tailored to your needs: reducing pain, improving posture, or feeling more at ease in your body.
                   </p>
                 </div>
                 <div className="flex justify-between text-sm pt-3 border-t border-border">
                   <div>
                     <span className="text-muted-foreground">Duration: </span>
-                    <span className="font-medium">45–60 min</span>
+                    <span className="font-medium">60 min</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Investment: </span>
-                    <span className="font-medium">$90–$110</span>
+                    <span className="text-muted-foreground">Price: </span>
+                    <span className="font-medium">$110</span>
                   </div>
                 </div>
                 <Button
