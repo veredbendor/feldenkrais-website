@@ -149,11 +149,11 @@ export default function Home() {
                 <div className="flex justify-between text-sm pt-3 border-t border-border">
                   <div>
                     <span className="text-muted-foreground">Duration: </span>
-                    <span className="font-medium">45–60 min</span>
+                    <span className="font-medium">60 min</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">Investment: </span>
-                    <span className="font-medium">$90–$110</span>
+                    <span className="font-medium">$110</span>
                   </div>
                 </div>
                 <Button
