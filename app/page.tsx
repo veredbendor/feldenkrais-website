@@ -153,7 +153,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="text-muted-foreground">Price: </span>
-                    <span className="font-medium">$120</span>
+                    <span className="font-medium">$140</span>
                   </div>
                 </div>
                 <Button

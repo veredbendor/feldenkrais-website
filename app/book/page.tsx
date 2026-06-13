@@ -75,7 +75,7 @@ export default function BookPage() {
               <CardContent className="p-6 space-y-5">
                 <div className="text-center space-y-1">
                   <h2 className="text-xl md:text-2xl font-light">Private Session</h2>
-                  <p className="text-sm text-muted-foreground">60 min &middot; $120</p>
+                  <p className="text-sm text-muted-foreground">60 min &middot; $140</p>
                 </div>
                 <Button
                   size="lg"
