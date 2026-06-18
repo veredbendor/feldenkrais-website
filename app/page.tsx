@@ -133,6 +133,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-10 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">{"What clients say"}</h2>
+            <div className="space-y-6">
+              {[
+                {
+                  quote:
+                    "Working with Vered is a joy. The beautiful, soulfully slow pace brings me to a peaceful place. On a scale of 10, I feel an 11.",
+                  full:
+                    "As a trigger point myotherapist, I feel the profoundly calming, integrating, soft energy of the Feldenkrais process as a completion of the other body/mind treatments in my own healing. Working with Vered is a joy, and I'm able to trust completely how the beautiful, soulfully slow pace brings me to a peaceful place. Those deeper, often hidden and stuck, encapsulated body experiences are given allowance and new freedom to let go, in a soft, flowing way that lasts. On a scale of 10, I feel an 11.",
+                  name: "Robin Birdfeather",
+                  credentials: "BA, MTPT (Trigger Point Myotherapist)",
+                },
+              ].map((t, index) => (
+                <Card key={index} className="border border-primary/20 bg-card shadow-md">
+                  <CardContent className="p-6 md:p-8 space-y-4">
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;{t.quote}&rdquo;
+                    </blockquote>
+                    {t.full && (
+                      <p className="text-sm leading-relaxed text-muted-foreground">{t.full}</p>
+                    )}
+                    <footer className="pt-2 border-t border-border">
+                      <p className="text-sm font-medium">{t.name}</p>
+                      {t.credentials && (
+                        <p className="text-xs text-muted-foreground">{t.credentials}</p>
+                      )}
+                    </footer>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Offerings Section */}
       <section id="offerings" className="py-6 bg-secondary/30">
         <div className="container mx-auto px-4">
