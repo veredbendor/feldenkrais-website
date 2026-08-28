@@ -9,7 +9,7 @@ import { RegistrationForm } from "./registration-form"
 export const metadata: Metadata = {
   title: "Release Your Neck & Shoulders – Feldenkrais® Workshop Series",
   description:
-    "A 4-week Feldenkrais Awareness Through Movement® workshop to relieve neck and shoulder tension. Thursdays 9-10 AM starting June 25, 2026 at Cotati Wellness Center.",
+    "A 4-week Feldenkrais Awareness Through Movement® workshop to relieve neck and shoulder tension. Thursdays 9-10 AM starting September 24, 2026 at Cotati Wellness Center.",
 }
 
 export default function WorkshopPage() {
@@ -80,7 +80,7 @@ export default function WorkshopPage() {
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">When</p>
                         <p className="font-medium">Thursdays, 9:00 – 10:00 AM</p>
-                        <p className="text-muted-foreground">June 25, July 2, 9 &amp; 16, 2026</p>
+                        <p className="text-muted-foreground">September 24, October 1, 8 &amp; 15, 2026</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">Where</p>
@@ -117,10 +117,10 @@ export default function WorkshopPage() {
             <h2 className="text-2xl md:text-3xl font-light text-center mb-6">The 4 sessions</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { week: "Week 1", date: "June 25", title: "Organizing from Your Center", desc: "Discover how your whole body supports your neck — building awareness of the connections between your center and your head." },
-                { week: "Week 2", date: "July 2", title: "Restoring Mobility", desc: "Gently explore the full range of your neck and shoulders, finding where movement has become restricted and inviting it to open." },
-                { week: "Week 3", date: "July 9", title: "Softening the Shoulders", desc: "Learn to let go of habitual shoulder tension through movements that connect your arms, shoulders, and spine." },
-                { week: "Week 4", date: "July 16", title: "Rediscovering Ease", desc: "Integrate the lessons of the series into a felt sense of lightness, freedom, and new postural possibilities." },
+                { week: "Week 1", date: "September 24", title: "Organizing from Your Center", desc: "Discover how your whole body supports your neck — building awareness of the connections between your center and your head." },
+                { week: "Week 2", date: "October 1", title: "Restoring Mobility", desc: "Gently explore the full range of your neck and shoulders, finding where movement has become restricted and inviting it to open." },
+                { week: "Week 3", date: "October 8", title: "Softening the Shoulders", desc: "Learn to let go of habitual shoulder tension through movements that connect your arms, shoulders, and spine." },
+                { week: "Week 4", date: "October 15", title: "Rediscovering Ease", desc: "Integrate the lessons of the series into a felt sense of lightness, freedom, and new postural possibilities." },
               ].map((session, index) => (
                 <Card key={index} className="border-border/50 bg-card">
                   <CardContent className="p-5">
