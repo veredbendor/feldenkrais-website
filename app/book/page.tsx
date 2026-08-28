@@ -75,7 +75,7 @@ export default function BookPage() {
               <CardContent className="p-6 space-y-5">
                 <div className="text-center space-y-1">
                   <h2 className="text-xl md:text-2xl font-light">Private Session</h2>
-                  <p className="text-sm text-muted-foreground">60 min &middot; $140</p>
+                  <p className="text-sm text-muted-foreground">60 min &middot; $120</p>
                 </div>
                 <Button
                   size="lg"
@@ -109,7 +109,7 @@ export default function BookPage() {
           <div className="max-w-2xl mx-auto text-center space-y-2">
             <p className="text-sm font-medium">FELDENKRAIS<sup className="text-[8px]">®</sup></p>
             <p className="text-xs text-muted-foreground">
-              © 2025 Vered Ben-Dor. Feldenkrais® is a registered service mark of the Feldenkrais Guild® of North America.
+              © 2026 Vered Ben-Dor. Feldenkrais® is a registered service mark of the Feldenkrais Guild® of North America.
             </p>
           </div>
         </div>

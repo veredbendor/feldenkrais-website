@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Crimson_Pro } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { SITE_URL, SITE_NAME } from "@/lib/site"
 
 const crimsonPro = Crimson_Pro({
   subsets: ["latin"],
@@ -10,10 +11,30 @@ const crimsonPro = Crimson_Pro({
   style: ["normal", "italic"],
 })
 
+const TITLE = "Feldenkrais in Rohnert Park | Vered Ben-Dor, GCFP"
+const DESCRIPTION =
+  "Gentle one-to-one Feldenkrais sessions in a quiet home studio in Rohnert Park, Sonoma County. Guild Certified practitioner since 1994."
+
 export const metadata: Metadata = {
-  title: "Feldenkrais® - Reconnect with Your Organic Intelligence",
-  description:
-    "Experience gentle, hands-on Feldenkrais sessions to awaken ease, restore balance, and feel fully alive. 45-60 minute sessions focused on awareness-based movement and nervous system regulation.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    locale: "en_US",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sonoma Feldenkrais" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og-image.jpg"],
+  },
   generator: "v0.app",
   icons: {
     icon: [
