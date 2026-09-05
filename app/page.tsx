@@ -1,10 +1,73 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Logo } from "@/components/logo"
 import Image from "next/image"
 import Link from "next/link"
-import { BOOKING_URL, SITE_URL, SITE_NAME } from "@/lib/site"
+import {
+  BOOKING_URL,
+  SITE_URL,
+  SITE_NAME,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  EMAIL,
+} from "@/lib/site"
 
+const FAQ = [
+  {
+    q: "What is the Feldenkrais Method?",
+    a: "A way of learning to move with less effort. You move slowly and gently, with close attention, and your nervous system works out an easier way to do what you were already doing. It is education, not treatment. Nothing is adjusted, forced or stretched.",
+  },
+  {
+    q: "What actually happens in a session?",
+    a: "You lie fully clothed on a low padded table, wider than a massage table. I move you slowly with my hands, and sometimes ask you to notice something. Your job is not to analyze or help. It is only to notice. We finish standing, so you can feel what changed.",
+  },
+  {
+    q: "How is this different from massage?",
+    a: "Massage works on soft tissue. Feldenkrais works with your nervous system, which is what decides how much effort you use in the first place. My hands are giving your brain information, not releasing muscle. That is why the change tends to stay with you after you leave.",
+  },
+  {
+    q: "How is this different from physical therapy or chiropractic?",
+    a: "Physical therapy usually prescribes exercises to strengthen or stretch. Chiropractic adjusts. Feldenkrais does neither. There is no protocol, no adjustment and no homework you have to force yourself through. It also sits alongside them well, and many of my clients see me while they are still seeing someone else.",
+  },
+  {
+    q: "How is this different from yoga or stretching?",
+    a: "You do not need to be flexible, you never hold a position, and nothing is stretched. Most people are surprised by how small the movements are. If yoga or stretching has left you sore or discouraged, this is a different experience.",
+  },
+  {
+    q: "Will it hurt? Is it strenuous?",
+    a: "No, and no. Everything stays inside your comfortable range. If something is uncomfortable you say so and we change it. Most people find it deeply relaxing, and some find it energizing.",
+  },
+  {
+    q: "I am in a lot of pain and cannot move much. Can I still do this?",
+    a: "Yes. This work was built for exactly that. The movements are small enough that limited range is not an obstacle, and we work with whatever you have on the day.",
+  },
+  {
+    q: "Will this cure my pain?",
+    a: "I will not promise that. What I can say honestly is that a lot of persistent pain is fed by how a person is moving and holding themselves, and that is learnable. Many people get real, lasting relief. Some do not. You will have a good sense of which you are within four to six lessons.",
+  },
+  {
+    q: "How many sessions will I need?",
+    a: "Most people notice something after the first one. If Feldenkrais is going to make a meaningful difference for you, you will usually know by the fourth to sixth lesson. Three or four is where change tends to start holding on its own.",
+  },
+  {
+    q: "What should I wear?",
+    a: "Soft clothes you can move and lie down in, the sort of thing you would wear to a yoga class. Long trousers are easier than a skirt. Nothing comes off and there is nothing to change into.",
+  },
+  {
+    q: "Do you take insurance?",
+    a: "No. Feldenkrais is an educational method with therapeutic benefits rather than a licensed medical treatment, so it is paid directly. Some flexible spending accounts will reimburse it, and I can give you a receipt.",
+  },
+  {
+    q: "Where are you located?",
+    a: "A quiet home studio in Rohnert Park, a few minutes from Cotati, Penngrove, Petaluma and south Santa Rosa. Parking is easy. You get the exact address with your booking confirmation.",
+  },
+]
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -12,9 +75,10 @@ const localBusinessSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   description:
-    "One-to-one Feldenkrais Functional Integration sessions with Vered Ben-Dor, Guild Certified Feldenkrais Practitioner, in Rohnert Park, Sonoma County.",
+    "One-to-one Feldenkrais Functional Integration lessons with Vered Ben-Dor, Guild Certified Feldenkrais Practitioner, in Rohnert Park, Sonoma County. Gentle, hands-on movement education for persistent pain, balance and ease of movement.",
   founder: "Vered Ben-Dor",
-  email: "bendor.vered@gmail.com",
+  email: EMAIL,
+  telephone: PHONE_TEL,
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -29,6 +93,16 @@ const localBusinessSchema = {
   },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -36,73 +110,137 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {/* Header */}
       <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Logo className="h-10 w-10 text-primary" />
-            <span className="text-xl font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></span>
+            <span className="text-xl font-semibold">
+              FELDENKRAIS<sup className="text-xs">&reg;</sup>
+            </span>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/workshop" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
-              Workshop
-            </Link>
-            <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
-              About
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <a href="#what" className="text-foreground/70 hover:text-foreground transition-colors">
+              What it is
             </a>
-            <a href="#visit" className="text-foreground/70 hover:text-foreground transition-colors">
-              Your visit
+            <a href="#who" className="text-foreground/70 hover:text-foreground transition-colors">
+              Is this you
             </a>
-            <a href="#offerings" className="text-foreground/70 hover:text-foreground transition-colors">
-              Offerings
+            <a href="#session" className="text-foreground/70 hover:text-foreground transition-colors">
+              A session
             </a>
-            <a href="#bio" className="text-foreground/70 hover:text-foreground transition-colors">
-              Bio
+            <a href="#pricing" className="text-foreground/70 hover:text-foreground transition-colors">
+              Pricing
+            </a>
+            <a href="#faq" className="text-foreground/70 hover:text-foreground transition-colors">
+              Questions
             </a>
           </nav>
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Session</a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              Book a lesson
+            </a>
           </Button>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-8">
+      {/* Hero */}
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
+          <div className="max-w-3xl mx-auto text-center space-y-5">
             <Logo className="h-12 w-12 text-primary mx-auto" />
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-primary">
-              Feldenkrais<sup>®</sup> &middot; Rohnert Park, Sonoma County
+              Feldenkrais<sup>&reg;</sup> &middot; Rohnert Park, Sonoma County
             </p>
             <h1 className="text-4xl md:text-5xl font-light tracking-tight text-balance">
-              Move with less effort
+              Move with less effort, and less pain
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              The Feldenkrais Method with Vered Ben-Dor, Guild Certified since 1994. Private sessions in a quiet home studio in Rohnert Park.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Gentle one-to-one lessons in a quiet home studio in Rohnert Park. For pain that
+              has not resolved, for balance you can trust, and for moving well at any age.
+              Fully clothed, hands-on, never forced.
             </p>
-            <p className="text-sm md:text-base font-light italic text-muted-foreground/80">
-              Reconnect with your organic intelligence. Awaken ease. Restore balance.
-            </p>
-            <div className="flex justify-center pt-2">
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a session</a>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  Book a lesson
+                </a>
               </Button>
+              <Button asChild size="lg" variant="outline" className="border-primary/30">
+                <a href={`tel:${PHONE_TEL}`}>Free 15-minute call</a>
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Not sure if this is right for you? Call {PHONE_DISPLAY} and ask. No charge, no
+              pressure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What it is */}
+      <section id="what" className="py-12 md:py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="space-y-5">
+                <h2 className="text-2xl md:text-3xl font-light">What Feldenkrais actually is</h2>
+                <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>
+                    Most things you have been offered for pain or stiffness ask for repetition,
+                    stretching or willpower. This asks for none of them.
+                  </p>
+                  <p>
+                    In a lesson you move slowly and gently while paying close attention, and your
+                    nervous system finds an easier way to do what it was already doing. The change
+                    happens in how your brain organizes the movement, not in the tissue.
+                  </p>
+                  <p className="text-foreground">
+                    It is learning, not treatment. Nothing is adjusted, stretched or corrected, and
+                    it should never hurt.
+                  </p>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground border-l-2 border-primary/30 pl-4">
+                  <li>Not a treatment, an adjustment, or an exercise program.</li>
+                  <li>No stretching, no holding positions, no strength required.</li>
+                  <li>You stay fully clothed on a low padded table.</li>
+                </ul>
+              </div>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                <Image
+                  src="/images/feldenkrais-hands-on.png"
+                  alt="A Feldenkrais lesson: gentle hands-on guided movement on a low padded table"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Workshop Strip */}
-      <section id="workshop" className="py-5">
+      {/* Group class strip */}
+      <section id="workshop" className="py-6">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between rounded-lg border border-border/60 bg-card/60 px-5 py-4">
               <div className="space-y-1">
-                <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground">Group class</p>
+                <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground">
+                  Group class in Cotati
+                </p>
                 <h2 className="text-lg font-light">Release Your Neck &amp; Shoulders</h2>
                 <p className="text-sm text-muted-foreground">
-                  4 Thursdays from September 24 &middot; 9&ndash;10 AM &middot; $20 drop-in &middot; Cotati Wellness Center
+                  4 Thursdays from September 24 &middot; 9&ndash;10 AM &middot; $20 drop-in
+                  &middot; Cotati Wellness Center
+                </p>
+                <p className="text-xs text-muted-foreground/80">
+                  Same method, done as a class. You follow spoken instructions on a mat instead
+                  of being guided by hand.
                 </p>
               </div>
               <Button variant="outline" className="border-primary/30 whitespace-nowrap" asChild>
@@ -113,40 +251,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-10 bg-secondary/30">
+      {/* Is this you */}
+      <section id="who" className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4">
-                <h2 className="text-2xl md:text-3xl font-light">{"What actually happens"}</h2>
-                <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
-                  <p>
-                    The Feldenkrais Method uses gentle, guided movement and close attention to change how you organize yourself. Nothing is stretched, adjusted, or corrected.
-                  </p>
-                  <p>
-                    You lie on a table fully clothed, I move you slowly, and your nervous system finds an easier way to do what it was already doing.
-                  </p>
-                  <p className="text-foreground">
-                    Most people notice the difference standing up.
-                  </p>
-                </div>
-              </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                <Image
-                  src="/images/feldenkrais-hands-on.png"
-                  alt="Feldenkrais hands-on session"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <div className="max-w-5xl mx-auto space-y-8">
+            <div className="text-center space-y-3">
+              <h2 className="text-2xl md:text-3xl font-light">Is this you?</h2>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                People come to me for three broad reasons. You may recognize yourself in more
+                than one.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Pain that has not resolved",
+                  items: [
+                    "Neck, back, shoulder or hip pain that eased with treatment but never settled",
+                    "An old injury you have quietly worked around for years",
+                    "Stiffness that arrived after surgery and stayed",
+                    "Relief that keeps wearing off",
+                  ],
+                },
+                {
+                  title: "Balance and confidence",
+                  items: [
+                    "Footing that is not what it was on stairs or uneven ground",
+                    "Getting up from a chair or the floor now takes planning",
+                    "Turning to look behind you while driving",
+                    "The suspicion that this is just age, when much of it is habit",
+                  ],
+                },
+                {
+                  title: "Moving well, and better",
+                  items: [
+                    "Musicians, gardeners and desk workers with overuse strain",
+                    "Dancers, cyclists and martial artists stuck at a plateau",
+                    "Breathing that feels shallow or held",
+                    "Wanting range and coordination rather than more repetitions",
+                  ],
+                },
+              ].map((group) => (
+                <Card key={group.title} className="border-border/50 bg-card">
+                  <CardContent className="p-6 space-y-4">
+                    <h3 className="text-lg font-medium">{group.title}</h3>
+                    <ul className="space-y-3">
+                      {group.items.map((item) => (
+                        <li
+                          key={item}
+                          className="text-sm leading-relaxed text-muted-foreground pl-4 border-l border-primary/25"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-10 md:py-12 relative">
+      {/* A session, minute by minute */}
+      <section id="session" className="py-12 md:py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="text-center space-y-3">
+              <h2 className="text-2xl md:text-3xl font-light">What a lesson is like</h2>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Sixty minutes, one to one. Here is the whole thing, so nothing is a surprise.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                {
+                  when: "First 10 minutes",
+                  what: "We talk. What do you want to do more easily, and what gets in the way? I watch you do a few ordinary things, like standing up, turning, or reaching, so I can see how you currently organize yourself.",
+                },
+                {
+                  when: "The next 40",
+                  what: "You lie fully clothed on a low padded table, wider than a massage table. I move you slowly with my hands. Your job is not to help or analyze. It is only to notice where your bones are moving. Nothing is forced. Most people find it deeply restful.",
+                },
+                {
+                  when: "Last 10 minutes",
+                  what: "You stand up and walk, and we see together what changed. I usually give you one small thing to play with at home. Nothing that needs discipline.",
+                },
+              ].map((step) => (
+                <Card key={step.when} className="border-border/50 bg-card">
+                  <CardContent className="p-6 grid sm:grid-cols-[140px_1fr] gap-4 items-start">
+                    <p className="text-sm font-medium tracking-wide uppercase text-primary">
+                      {step.when}
+                    </p>
+                    <p className="text-base leading-relaxed text-muted-foreground">{step.what}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What changes */}
+      <section className="py-12 md:py-16 relative">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/feldenkrais-session-bg.png"
@@ -157,19 +364,21 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-light text-center mb-8">{"What changes"}</h2>
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
+              What people notice
+            </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                "Neck and shoulders that turn further, with less effort",
+                "Turning further to look behind you, without the effort",
                 "Standing and sitting without bracing",
                 "Fuller, quieter breathing",
-                "Better coordination in turning, reaching and walking",
-                "Less pain and stiffness for many people",
-                "More ease in dance, sport and martial arts",
-              ].map((benefit, index) => (
-                <Card key={index} className="border-border/50 bg-card/80 backdrop-blur-sm">
+                "Steadier walking on stairs and uneven ground",
+                "Less pain, and less of the guarding that feeds it",
+                "More range in dance, sport and martial arts",
+              ].map((benefit) => (
+                <Card key={benefit} className="border-border/50 bg-card/80 backdrop-blur-sm">
                   <CardContent className="p-6 text-center">
-                    <p className="text-lg leading-relaxed">{benefit}</p>
+                    <p className="text-base leading-relaxed">{benefit}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -178,137 +387,146 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-10 md:py-12">
+      {/* Testimonial */}
+      <section id="testimonials" className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">{"What clients say"}</h2>
-            <div className="space-y-6">
-              {[
-                {
-                  quote:
-                    "Working with Vered is a joy. The beautiful, soulfully slow pace brings me to a peaceful place. On a scale of 10, I feel an 11.",
-                  full:
-                    "As a trigger point myotherapist, I feel the profoundly calming, integrating, soft energy of the Feldenkrais process as a completion of the other body/mind treatments in my own healing. Working with Vered is a joy, and I'm able to trust completely how the beautiful, soulfully slow pace brings me to a peaceful place. Those deeper, often hidden and stuck, encapsulated body experiences are given allowance and new freedom to let go, in a soft, flowing way that lasts. On a scale of 10, I feel an 11.",
-                  name: "Robin Birdfeather",
-                  credentials: "BA, MTPT (Trigger Point Myotherapist)",
-                },
-              ].map((t, index) => (
-                <Card key={index} className="border border-primary/20 bg-card shadow-md">
-                  <CardContent className="p-6 md:p-8 space-y-4">
-                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                      &ldquo;{t.quote}&rdquo;
-                    </blockquote>
-                    {t.full && (
-                      <p className="text-sm leading-relaxed text-muted-foreground">{t.full}</p>
-                    )}
-                    <footer className="pt-2 border-t border-border">
-                      <p className="text-sm font-medium">{t.name}</p>
-                      {t.credentials && (
-                        <p className="text-xs text-muted-foreground">{t.credentials}</p>
-                      )}
-                    </footer>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Your Visit Section */}
-      <section id="visit" className="py-10 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl md:text-3xl font-light text-center">{"Your visit"}</h2>
-            <p className="text-base leading-relaxed text-muted-foreground text-center max-w-xl mx-auto">
-              Sessions are held in a quiet home studio in Rohnert Park, a few minutes from Cotati, Penngrove and south Santa Rosa. Parking is easy. The exact address comes with your booking confirmation.
-            </p>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {[
-                {
-                  q: "What do I wear?",
-                  a: "Soft clothes you can move in. Nothing comes off and there is nothing to change into.",
-                },
-                {
-                  q: "Does it hurt?",
-                  a: "No. If anything is uncomfortable, say so and we change it.",
-                },
-                {
-                  q: "How many do I need?",
-                  a: "Most people notice something after one. Three or four is where the change tends to hold.",
-                },
-              ].map((item, index) => (
-                <Card key={index} className="border-border/50 bg-card">
-                  <CardContent className="p-5 space-y-2">
-                    <p className="text-base font-medium">{item.q}</p>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.a}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Offerings Section */}
-      <section id="offerings" className="py-10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-light text-center mb-6">{"Session details"}</h2>
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
+              What clients say
+            </h2>
             <Card className="border border-primary/20 bg-card shadow-md">
-              <CardContent className="p-5 space-y-4">
-                <div className="space-y-2">
-                  <h3 className="text-base font-semibold">{"Private session"}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Functional Integration, one to one, tailored to what you want to move more easily.
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                  &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings me
+                  to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
+                </blockquote>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  As a trigger point myotherapist, I feel the profoundly calming, integrating,
+                  soft energy of the Feldenkrais process as a completion of the other body/mind
+                  treatments in my own healing. Working with Vered is a joy, and I am able to
+                  trust completely how the beautiful, soulfully slow pace brings me to a peaceful
+                  place. Those deeper, often hidden and stuck, encapsulated body experiences are
+                  given allowance and new freedom to let go, in a soft, flowing way that lasts.
+                </p>
+                <footer className="pt-2 border-t border-border">
+                  <p className="text-sm font-medium">Robin Birdfeather</p>
+                  <p className="text-xs text-muted-foreground">
+                    BA, MTPT (Trigger Point Myotherapist)
                   </p>
-                </div>
-                <div className="flex justify-between text-sm pt-3 border-t border-border">
-                  <div>
-                    <span className="text-muted-foreground">Duration: </span>
-                    <span className="font-medium">60 min</span>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground">Price: </span>
-                    <span className="font-medium">$120</span>
-                  </div>
-                </div>
-                <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book your session</a>
-                </Button>
+                </footer>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Bio Section */}
-      <section id="bio" className="py-8 md:py-10 bg-secondary/30">
+      {/* Pricing */}
+      <section id="pricing" className="py-12 md:py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h2 className="text-2xl md:text-3xl font-light text-center">
+              What it costs, and how many you need
+            </h2>
+            <Card className="border border-primary/20 bg-card shadow-md">
+              <CardContent className="p-6 space-y-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div>
+                    <h3 className="text-lg font-medium">Private lesson</h3>
+                    <p className="text-sm text-muted-foreground">
+                      One to one, in the Rohnert Park studio
+                    </p>
+                  </div>
+                  <p className="text-2xl font-light">
+                    $120
+                    <span className="text-sm text-muted-foreground"> / 60 min</span>
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm leading-relaxed text-muted-foreground pt-4 border-t border-border">
+                  <p>
+                    Most people notice something after the first lesson. If Feldenkrais is going
+                    to make a meaningful difference for you, you will usually know by the fourth
+                    to sixth. That is a small, checkable commitment, and I would rather you knew
+                    it upfront.
+                  </p>
+                  <p>
+                    Three or four lessons is where the change tends to start holding on its own.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <Button asChild className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                      Book a lesson
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border-primary/30">
+                    <a href={`tel:${PHONE_TEL}`}>Free 15-minute call</a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="text-center space-y-3">
+              <h2 className="text-2xl md:text-3xl font-light">Questions people ask</h2>
+              <p className="text-base text-muted-foreground">
+                Including the ones most people are too polite to ask out loud.
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="w-full">
+              {FAQ.map((item, index) => (
+                <AccordionItem key={item.q} value={`faq-${index}`}>
+                  <AccordionTrigger className="text-left text-base font-medium">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base leading-relaxed text-muted-foreground">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Bio */}
+      <section id="bio" className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-light text-center mb-6">{"About your practitioner"}</h2>
-            <div className="grid md:grid-cols-[180px_1fr] gap-6 items-start">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
+              Who you will be working with
+            </h2>
+            <div className="grid md:grid-cols-[180px_1fr] gap-8 items-start">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto md:mx-0 w-full max-w-[180px]">
                 <Image
                   src="/images/vered-headshot.png"
-                  alt="Vered Ben-Dor, Feldenkrais Practitioner"
+                  alt="Vered Ben-Dor, Guild Certified Feldenkrais Practitioner"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <div>
                   <p className="text-base font-medium">Vered Ben-Dor</p>
                   <p className="text-xs text-muted-foreground">
-                    Guild Certified Feldenkrais Practitioner &middot; Rohnert Park, California
+                    Guild Certified Feldenkrais Practitioner since 1994 &middot; Rohnert Park,
+                    California
                   </p>
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  I completed the four-year Feldenkrais training at Emerson College in England in 1994 and have been practicing ever since, alongside a long career in software engineering. Decades of Tai Chi, Qi Gong, dance and other somatic practices sit underneath the work: awareness, fluidity, embodied presence, and intelligent movement.
+                  I trained for four years at Emerson College in England and qualified in 1994,
+                  which means I have been doing this work for more than thirty years. Underneath
+                  it sit decades of Tai Chi, Qi Gong and dance, which is where I learned to watch
+                  how a person actually moves.
                 </p>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  I see clients one to one in a quiet studio at my home in Rohnert Park, and I have taught in Sonoma County wellness settings for years.
+                  I see clients one to one in a quiet studio at my home in Rohnert Park, and I
+                  have taught in Sonoma County wellness settings for years.
                 </p>
               </div>
             </div>
@@ -316,27 +534,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Booking Section */}
-      <section id="book" className="py-8">
+      {/* Booking */}
+      <section id="book" className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-md mx-auto text-center space-y-4">
-            <h2 className="text-xl md:text-2xl font-light">{"Book your session"}</h2>
+          <div className="max-w-2xl mx-auto text-center space-y-6">
+            <h2 className="text-2xl md:text-3xl font-light">Book a lesson</h2>
+            <p className="text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
+              Pick a time that works for you, or call first if you would rather talk it through.
+              Rohnert Park, close to Cotati, Penngrove, Petaluma and south Santa Rosa.
+            </p>
             <Card className="border border-primary/20 bg-card shadow-md">
-              <CardContent className="p-4 space-y-4">
+              <CardContent className="p-6 space-y-5">
+                <Button asChild size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                    See available times
+                  </a>
+                </Button>
                 <div className="flex flex-col items-center gap-3">
                   <div className="relative w-28 h-28 rounded overflow-hidden border border-primary/10 bg-white p-1">
                     <Image
                       src="/images/booking-qr-code.jpg"
-                      alt="Scan to book your session"
+                      alt="Scan to book a Feldenkrais lesson"
                       fill
                       className="object-contain"
                     />
                   </div>
-                  <p className="text-sm text-muted-foreground">Scan to book, or email me</p>
+                  <p className="text-xs text-muted-foreground">Or scan to book from your phone</p>
                 </div>
-                <div className="text-sm pt-3 border-t border-border">
-                  <a href="mailto:bendor.vered@gmail.com" className="text-primary hover:underline">
-                    bendor.vered@gmail.com
+                <div className="grid sm:grid-cols-2 gap-3 text-sm pt-4 border-t border-border">
+                  <a href={`tel:${PHONE_TEL}`} className="text-primary hover:underline">
+                    {PHONE_DISPLAY}
+                  </a>
+                  <a href={`mailto:${EMAIL}`} className="text-primary hover:underline">
+                    {EMAIL}
                   </a>
                 </div>
               </CardContent>
@@ -346,13 +576,19 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-4 bg-card/30">
+      <footer className="border-t border-border/50 py-6 bg-card/30">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-2">
-            <p className="text-sm font-medium">FELDENKRAIS<sup className="text-[8px]">®</sup></p>
-            <p className="text-xs text-muted-foreground">Rohnert Park, Sonoma County, California</p>
+            <p className="text-sm font-medium">
+              FELDENKRAIS<sup className="text-[8px]">&reg;</sup>
+            </p>
             <p className="text-xs text-muted-foreground">
-              © 2026 Vered Ben-Dor. Feldenkrais® is a registered service mark of the Feldenkrais Guild® of North America.
+              Sonoma Feldenkrais &middot; Rohnert Park, Sonoma County, California &middot;{" "}
+              {PHONE_DISPLAY}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              &copy; 2026 Vered Ben-Dor. Feldenkrais&reg; is a registered service mark of the
+              Feldenkrais Guild&reg; of North America.
             </p>
           </div>
         </div>
