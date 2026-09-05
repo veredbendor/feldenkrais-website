@@ -84,11 +84,6 @@ export default function Home() {
             <p className="text-sm md:text-base font-light italic text-muted-foreground/80">
               Reconnect with your organic intelligence. Awaken ease. Restore balance.
             </p>
-            <div className="flex justify-center pt-2">
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a session</a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
