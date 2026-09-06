@@ -32,6 +32,8 @@ main, or the rewrite is lost.
 - Lead with the reader's problem, never with the method
 - Concrete over abstract. "Turning to look behind you while driving" beats
   "improved rotational mobility"
+- Say "nervous system", never "brain". The word brain reads as neuroscience
+  marketing; nervous system reads as physiology
 - Never promise a cure and never imply medical treatment. Feldenkrais is
   education with therapeutic benefits, not therapy
 - Short sentences

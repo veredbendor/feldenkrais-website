@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Logo } from "@/components/logo"
 import Image from "next/image"
 import Link from "next/link"
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site"
 
 export default function BookPage() {
   return (
@@ -14,19 +15,25 @@ export default function BookPage() {
             <Logo className="h-10 w-10 text-primary" />
             <span className="text-xl font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#about" className="text-foreground/70 hover:text-foreground transition-colors">
-              About
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <Link href="/#what" className="text-foreground/70 hover:text-foreground transition-colors">
+              What it is
             </Link>
-            <Link href="/#offerings" className="text-foreground/70 hover:text-foreground transition-colors">
-              Offerings
+            <Link href="/#who" className="text-foreground/70 hover:text-foreground transition-colors">
+              Is this you
             </Link>
-            <Link href="/#bio" className="text-foreground/70 hover:text-foreground transition-colors">
-              Bio
+            <Link href="/#session" className="text-foreground/70 hover:text-foreground transition-colors">
+              A session
+            </Link>
+            <Link href="/#pricing" className="text-foreground/70 hover:text-foreground transition-colors">
+              Pricing
+            </Link>
+            <Link href="/#faq" className="text-foreground/70 hover:text-foreground transition-colors">
+              Questions
             </Link>
           </nav>
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="https://tinyurl.com/vered-feldenkrais-sch" target="_blank" rel="noopener noreferrer">Book a Session</a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Session</a>
           </Button>
         </div>
       </header>
@@ -37,7 +44,7 @@ export default function BookPage() {
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <h1 className="text-3xl md:text-4xl font-light tracking-tight text-balance">Book a Private Session</h1>
             <p className="text-base md:text-lg font-light text-muted-foreground">
-              Retrain your nervous system for ease, comfort & coordination
+              For pain that has not resolved, for balance you can trust, and for moving well at any age
             </p>
           </div>
         </div>
@@ -59,7 +66,7 @@ export default function BookPage() {
               <div className="space-y-3">
                 <p className="text-base font-medium">Vered Ben-Dor</p>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Guild Certified Feldenkrais Practitioner with 25 years of experience. Through gentle guided movement and hands-on work, I help you discover new patterns of ease and coordination — reducing pain and improving how you move through daily life.
+                  Guild Certified Feldenkrais Practitioner since 1994. I trained for four years at Emerson College in England, which means I have been doing this work for more than thirty years. Through gentle, hands-on guided movement I help you find easier ways to move, so there is less pain and more ease in daily life.
                 </p>
               </div>
             </div>
@@ -77,13 +84,17 @@ export default function BookPage() {
                   <h2 className="text-xl md:text-2xl font-light">Private Session</h2>
                   <p className="text-sm text-muted-foreground">60 min &middot; $120</p>
                 </div>
-                <Button
-                  size="lg"
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-base"
-                  asChild
-                >
-                  <a href="https://tinyurl.com/vered-feldenkrais-sch" target="_blank" rel="noopener noreferrer">Book Your Session</a>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book Your Session</a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border-primary/30">
+                    <a href={`tel:${PHONE_TEL}`}>Free 15-minute call</a>
+                  </Button>
+                </div>
+                <p className="text-xs text-muted-foreground text-center">
+                  Not sure if this is right for you? Call {PHONE_DISPLAY} and ask. No charge, no pressure.
+                </p>
               </CardContent>
             </Card>
 
@@ -104,12 +115,19 @@ export default function BookPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-4 bg-card/30">
+      <footer className="border-t border-border/50 py-6 bg-card/30">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-2">
-            <p className="text-sm font-medium">FELDENKRAIS<sup className="text-[8px]">®</sup></p>
+            <p className="text-sm font-medium">
+              FELDENKRAIS<sup className="text-[8px]">&reg;</sup>
+            </p>
             <p className="text-xs text-muted-foreground">
-              © 2026 Vered Ben-Dor. Feldenkrais® is a registered service mark of the Feldenkrais Guild® of North America.
+              Sonoma Feldenkrais &middot; Rohnert Park, Sonoma County, California &middot;{" "}
+              {PHONE_DISPLAY}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              &copy; 2026 Vered Ben-Dor. Feldenkrais&reg; is a registered service mark of the
+              Feldenkrais Guild&reg; of North America.
             </p>
           </div>
         </div>
