@@ -29,7 +29,7 @@ const FAQ = [
   },
   {
     q: "How is this different from massage?",
-    a: "Massage works on soft tissue. Feldenkrais works with your nervous system, which is what decides how much effort you use in the first place. My hands are giving your brain information, not releasing muscle. That is why the change tends to stay with you after you leave.",
+    a: "Massage works on soft tissue. Feldenkrais works with your nervous system, which is what decides how much effort you use in the first place. My hands are giving your nervous system information, not releasing muscle. That is why the change tends to stay with you after you leave.",
   },
   {
     q: "How is this different from physical therapy or chiropractic?",
@@ -38,6 +38,10 @@ const FAQ = [
   {
     q: "How is this different from yoga or stretching?",
     a: "You do not need to be flexible, you never hold a position, and nothing is stretched. Most people are surprised by how small the movements are. If yoga or stretching has left you sore or discouraged, this is a different experience.",
+  },
+  {
+    q: "Why hasn't stretching fixed this?",
+    a: "Stretching pulls on the muscle, and for twenty minutes it feels looser. But the muscle was never the problem. Your nervous system is holding it, and by the end of the hour it has quietly taken the length back. A lesson works on what is doing the holding, which is why the change stays.",
   },
   {
     q: "Will it hurt? Is it strenuous?",
@@ -189,20 +193,29 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="space-y-5">
-                <h2 className="text-2xl md:text-3xl font-light">What Feldenkrais actually is</h2>
+                <h2 className="text-2xl md:text-3xl font-light">
+                  You have not lost the movement. You have forgotten it.
+                </h2>
                 <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
                   <p>
-                    Most things you have been offered for pain or stiffness ask for repetition,
-                    stretching or willpower. This asks for none of them.
+                    Muscles do not tighten on their own. Your nervous system holds them, and after
+                    enough years of holding, it stops registering that it is doing it. The muscle
+                    feels stiff. It is not stiff. It is being held, and you can no longer feel your
+                    own hand on the switch.
                   </p>
                   <p>
-                    In a lesson you move slowly and gently while paying close attention, and your
-                    nervous system finds an easier way to do what it was already doing. The change
-                    happens in how your brain organizes the movement, not in the tissue.
+                    That is why stretching buys you twenty minutes and then it comes back.
+                    Stretching pulls on the muscle. It does not reach the part of you that is doing
+                    the holding.
+                  </p>
+                  <p>
+                    A Feldenkrais lesson goes to the switch. You move slowly and gently, with close
+                    attention, until the movement is something you can feel again. Once you can feel
+                    it, you can change it. That is why the change tends to stay.
                   </p>
                   <p className="text-foreground">
-                    It is learning, not treatment. Nothing is adjusted, stretched or corrected, and
-                    it should never hurt.
+                    A great deal of what gets filed under aging is this, and it can be learned at
+                    any age.
                   </p>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground border-l-2 border-primary/30 pl-4">
