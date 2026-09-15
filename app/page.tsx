@@ -138,6 +138,9 @@ export default function Home() {
             <a href="#session" className="text-foreground/70 hover:text-foreground transition-colors">
               A session
             </a>
+            <a href="#testimonials" className="text-foreground/70 hover:text-foreground transition-colors">
+              Reviews
+            </a>
             <a href="#pricing" className="text-foreground/70 hover:text-foreground transition-colors">
               Pricing
             </a>
@@ -403,12 +406,70 @@ export default function Home() {
       {/* Testimonial */}
       <section id="testimonials" className="py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
               What clients say
             </h2>
             <Card className="border border-primary/20 bg-card shadow-md">
+              <CardContent className="p-6 md:p-8">
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
+                    <Image
+                      src="/images/nelle-churchill.jpg"
+                      alt="Nelle Churchill, Fascial Stretch Specialist"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <div
+                      className="flex gap-0.5 text-primary text-lg"
+                      role="img"
+                      aria-label="Rated 5 out of 5 stars"
+                    >
+                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;The session was so lovely. I felt very safe and very comfortable as
+                      Vered moved my body in ways that felt attuned and intentional.&rdquo;
+                    </blockquote>
+                    <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+                      <p>
+                        The movement felt very educational for my body and really boosted my
+                        proprioception and body awareness. I have noticed that I am more grounded
+                        on my feet. I have had ankle issues that began from a very bad sprain when
+                        I was 13, and I am 30 now. I am walking differently and just feeling force
+                        move through my body differently. It is really amazing, and the change has
+                        been lasting.
+                      </p>
+                      <p>
+                        From my experience with Vered, I think Feldenkrais is a very beneficial
+                        modality. From a body awareness and neuromuscular reeducation standpoint, I
+                        feel a tremendous benefit, and I feel like my body is more intelligent with
+                        how it organizes force transmission through my joints. I&rsquo;m excited to
+                        experience more with Vered and deepen my body&rsquo;s understanding of
+                        movement.
+                      </p>
+                    </div>
+                    <footer className="pt-2 border-t border-border">
+                      <p className="text-sm font-medium">Nelle Churchill</p>
+                      <p className="text-xs text-muted-foreground">
+                        Fascial Stretch Specialist, Re&middot;Fascia
+                      </p>
+                    </footer>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-primary/20 bg-card shadow-md">
               <CardContent className="p-6 md:p-8 space-y-4">
+                <div
+                  className="flex gap-0.5 text-primary text-lg"
+                  role="img"
+                  aria-label="Rated 5 out of 5 stars"
+                >
+                  <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
                 <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
                   &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings me
                   to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
