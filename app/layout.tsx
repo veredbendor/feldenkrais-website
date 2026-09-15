@@ -11,9 +11,9 @@ const crimsonPro = Crimson_Pro({
   style: ["normal", "italic"],
 })
 
-const TITLE = "Feldenkrais in Rohnert Park | Vered Ben-Dor, GCFP"
+const TITLE = "Feldenkrais in Rohnert Park, Sonoma County | Vered Ben-Dor, GCFP"
 const DESCRIPTION =
-  "Gentle one-to-one Feldenkrais sessions in a quiet home studio in Rohnert Park, Sonoma County. Guild Certified practitioner since 1994."
+  "Gentle one-to-one Feldenkrais lessons in Rohnert Park for pain that has not resolved, balance, and ease of movement. Fully clothed, hands-on, never forced. Certified since 1994."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
