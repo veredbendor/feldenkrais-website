@@ -68,6 +68,19 @@ export default function WorkshopPage() {
                 efficient movement. Because how you move is how you move through life, these changes
                 often carry over into your thinking, emotional balance, and problem solving.
               </p>
+              <figure className="mx-auto w-full max-w-[720px] space-y-2">
+                <iframe
+                  className="aspect-video w-full rounded-lg border border-border/50"
+                  src="https://www.youtube-nocookie.com/embed/NQjBXunhOVQ"
+                  title="What is Feldenkrais Awareness Through Movement?"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+                <figcaption className="text-center text-xs text-muted-foreground">
+                  Video by Future Life Now
+                </figcaption>
+              </figure>
               <p>
                 The Method draws on physics, biomechanics, and a practical understanding of how
                 humans learn and develop. As Moshe Feldenkrais put it, &ldquo;We move according to
