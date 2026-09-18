@@ -9,7 +9,7 @@ import { RegistrationForm } from "./registration-form"
 export const metadata: Metadata = {
   title: "Release Your Neck & Shoulders – Feldenkrais® Workshop Series",
   description:
-    "A 4-week Feldenkrais Awareness Through Movement® workshop to relieve neck and shoulder tension. Thursdays 9-10 AM starting September 24, 2026 at Cotati Wellness Center.",
+    "A 4-week Feldenkrais Awareness Through Movement® workshop to relieve neck and shoulder tension. Thursdays 9-10 AM starting October 29, 2026 in Sebastopol, Sonoma County.",
 }
 
 export default function WorkshopPage() {
@@ -52,6 +52,59 @@ export default function WorkshopPage() {
         </div>
       </section>
 
+      {/* What the Method is */}
+      <section className="py-10 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto space-y-5">
+            <h2 className="text-2xl md:text-3xl font-light text-center">
+              About the Feldenkrais Method<sup className="text-sm">®</sup>
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                The Feldenkrais Method<sup className="text-[10px]">®</sup> of somatic education uses
+                gentle movement and directed attention to help you find easier, more effective ways
+                of doing what matters to you. You can expand your range of motion, improve
+                flexibility and coordination, and rediscover your natural capacity for graceful,
+                efficient movement. Because how you move is how you move through life, these changes
+                often carry over into your thinking, emotional balance, and problem solving.
+              </p>
+              <p>
+                The Method draws on physics, biomechanics, and a practical understanding of how
+                humans learn and develop. As Moshe Feldenkrais put it, &ldquo;We move according to
+                our perceived self-image.&rdquo; As your awareness grows, habits and unnecessary
+                tension become visible, and new options appear. That sensitivity is what lets you
+                live more fully, efficiently, and comfortably.
+              </p>
+              <p className="text-foreground">There are two ways to experience the work.</p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Card className="border-border/50 bg-card">
+                <CardContent className="p-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      Awareness Through Movement<sup className="text-[10px]">®</sup>
+                    </span>{" "}
+                    lessons are taught in a group, with students following the teacher&rsquo;s
+                    verbal guidance.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-border/50 bg-card">
+                <CardContent className="p-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      Functional Integration<sup className="text-[10px]">®</sup>
+                    </span>{" "}
+                    sessions are one-on-one lessons in which the fully clothed student is guided
+                    through touch, movement, and words.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Details + Description */}
       <section className="py-8 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -80,12 +133,12 @@ export default function WorkshopPage() {
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">When</p>
                         <p className="font-medium">Thursdays, 9:00 – 10:00 AM</p>
-                        <p className="text-muted-foreground">September 24, October 1, 8 &amp; 15, 2026</p>
+                        <p className="text-muted-foreground">October 29, November 5, 12 &amp; 19, 2026</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">Where</p>
-                        <p className="font-medium">Cotati Wellness Center</p>
-                        <p className="text-muted-foreground">8274 Old Redwood Hwy<br />Cotati, CA 94931</p>
+                        <p className="font-medium">Sebastopol, Sonoma County</p>
+                        <p className="text-muted-foreground">Exact venue with your registration confirmation</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wide mb-1">Duration</p>
@@ -117,10 +170,10 @@ export default function WorkshopPage() {
             <h2 className="text-2xl md:text-3xl font-light text-center mb-6">The 4 sessions</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { week: "Week 1", date: "September 24", title: "Organizing from Your Center", desc: "Discover how your whole body supports your neck — building awareness of the connections between your center and your head." },
-                { week: "Week 2", date: "October 1", title: "Restoring Mobility", desc: "Gently explore the full range of your neck and shoulders, finding where movement has become restricted and inviting it to open." },
-                { week: "Week 3", date: "October 8", title: "Softening the Shoulders", desc: "Learn to let go of habitual shoulder tension through movements that connect your arms, shoulders, and spine." },
-                { week: "Week 4", date: "October 15", title: "Rediscovering Ease", desc: "Integrate the lessons of the series into a felt sense of lightness, freedom, and new postural possibilities." },
+                { week: "Week 1", date: "October 29", title: "Organizing from Your Center", desc: "Discover how your whole body supports your neck — building awareness of the connections between your center and your head." },
+                { week: "Week 2", date: "November 5", title: "Restoring Mobility", desc: "Gently explore the full range of your neck and shoulders, finding where movement has become restricted and inviting it to open." },
+                { week: "Week 3", date: "November 12", title: "Softening the Shoulders", desc: "Learn to let go of habitual shoulder tension through movements that connect your arms, shoulders, and spine." },
+                { week: "Week 4", date: "November 19", title: "Rediscovering Ease", desc: "Integrate the lessons of the series into a felt sense of lightness, freedom, and new postural possibilities." },
               ].map((session, index) => (
                 <Card key={index} className="border-border/50 bg-card">
                   <CardContent className="p-5">
@@ -133,35 +186,6 @@ export default function WorkshopPage() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Feldenkrais */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4">
-                <h2 className="text-2xl md:text-3xl font-light">About the Feldenkrais Method<sup className="text-sm">®</sup></h2>
-                <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
-                  <p>
-                    The Feldenkrais Method is a somatic practice that uses gentle movement and directed attention to improve how you move, think, and feel.
-                  </p>
-                  <p>
-                    Rather than pushing through pain or forcing your body into a position, the method works with your nervous system — helping your brain find new, more efficient movement patterns that feel effortless and natural.
-                  </p>
-                </div>
-              </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                <Image
-                  src="/images/feldenkrais-hands-on.png"
-                  alt="Feldenkrais session"
-                  fill
-                  className="object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>

@@ -247,12 +247,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between rounded-lg border border-border/60 bg-card/60 px-5 py-4">
               <div className="space-y-1">
                 <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground">
-                  Group class in Cotati
+                  Group class in Sebastopol
                 </p>
                 <h2 className="text-lg font-light">Release Your Neck &amp; Shoulders</h2>
                 <p className="text-sm text-muted-foreground">
-                  4 Thursdays from September 24 &middot; 9&ndash;10 AM &middot; $20 drop-in
-                  &middot; Cotati Wellness Center
+                  4 Thursdays from October 29 &middot; 9&ndash;10 AM &middot; $20 drop-in
+                  &middot; Sebastopol
                 </p>
                 <p className="text-xs text-muted-foreground/80">
                   Same method, done as a class. You follow spoken instructions on a mat instead

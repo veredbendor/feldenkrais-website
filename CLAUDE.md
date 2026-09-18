@@ -46,9 +46,10 @@ main, or the rewrite is lost.
 - Location: quiet home studio in Rohnert Park. Near Cotati, Penngrove,
   Petaluma, south Santa Rosa. Exact address goes out with the booking
   confirmation
-- Group class: Release Your Neck & Shoulders, 4 Thursdays from September 24,
-  9-10 AM, $20 drop-in, at Cotati Wellness Center. Different venue from the
-  private studio and must stay clearly labelled as such
+- Group class: Release Your Neck & Shoulders, 4 Thursdays from October 29
+  (Oct 29, Nov 5, 12, 19), 9-10 AM, $20 drop-in, in Sebastopol (exact venue to
+  be confirmed, goes out with registration). Different venue from the private
+  studio and must stay clearly labelled as such
 - Public phone is the Google Voice number (707) 583-9472. Never put a personal
   cell on the site
 - Dosage line, keep consistent everywhere: most people notice something after
