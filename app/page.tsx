@@ -462,32 +462,45 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="border border-primary/20 bg-card shadow-md">
-              <CardContent className="p-6 md:p-8 space-y-4">
-                <div
-                  className="flex gap-0.5 text-primary text-lg"
-                  role="img"
-                  aria-label="Rated 5 out of 5 stars"
-                >
-                  <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <CardContent className="p-6 md:p-8">
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
+                    <Image
+                      src="/images/robin-birdfeather.png"
+                      alt="Robin Birdfeather, Trigger Point Myotherapist"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <div
+                      className="flex gap-0.5 text-primary text-lg"
+                      role="img"
+                      aria-label="Rated 5 out of 5 stars"
+                    >
+                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
+                      me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
+                    </blockquote>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      As a trigger point myotherapist, I feel the profoundly calming, integrating,
+                      soft energy of the Feldenkrais process as a completion of the other body/mind
+                      treatments in my own healing. Working with Vered is a joy, and I am able to
+                      trust completely how the beautiful, soulfully slow pace brings me to a
+                      peaceful place. Those deeper, often hidden and stuck, encapsulated body
+                      experiences are given allowance and new freedom to let go, in a soft, flowing
+                      way that lasts.
+                    </p>
+                    <footer className="pt-2 border-t border-border">
+                      <p className="text-sm font-medium">Robin Birdfeather</p>
+                      <p className="text-xs text-muted-foreground">
+                        BA, MTPT (Trigger Point Myotherapist)
+                      </p>
+                    </footer>
+                  </div>
                 </div>
-                <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                  &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings me
-                  to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
-                </blockquote>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  As a trigger point myotherapist, I feel the profoundly calming, integrating,
-                  soft energy of the Feldenkrais process as a completion of the other body/mind
-                  treatments in my own healing. Working with Vered is a joy, and I am able to
-                  trust completely how the beautiful, soulfully slow pace brings me to a peaceful
-                  place. Those deeper, often hidden and stuck, encapsulated body experiences are
-                  given allowance and new freedom to let go, in a soft, flowing way that lasts.
-                </p>
-                <footer className="pt-2 border-t border-border">
-                  <p className="text-sm font-medium">Robin Birdfeather</p>
-                  <p className="text-xs text-muted-foreground">
-                    BA, MTPT (Trigger Point Myotherapist)
-                  </p>
-                </footer>
               </CardContent>
             </Card>
           </div>
