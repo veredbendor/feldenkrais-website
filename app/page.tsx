@@ -132,8 +132,8 @@ export default function Home() {
             <a href="#what" className="text-foreground/70 hover:text-foreground transition-colors">
               What it is
             </a>
-            <a href="#who" className="text-foreground/70 hover:text-foreground transition-colors">
-              Is this you
+            <a href="#method" className="text-foreground/70 hover:text-foreground transition-colors">
+              The Feldenkrais Method<sup>&reg;</sup>
             </a>
             <a href="#session" className="text-foreground/70 hover:text-foreground transition-colors">
               A session
@@ -261,63 +261,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Is this you */}
-      <section id="who" className="py-12 md:py-16">
+      {/* The Feldenkrais Method */}
+      <section id="method" className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-8">
-            <div className="text-center space-y-3">
-              <h2 className="text-2xl md:text-3xl font-light">Is this you?</h2>
-              <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                People come to me for three broad reasons. You may recognize yourself in more
-                than one.
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-2xl md:text-3xl font-light text-center">
+              The Feldenkrais Method<sup className="text-sm">&reg;</sup>
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                The Feldenkrais Method<sup className="text-[10px]">&reg;</sup> of somatic education
+                uses gentle movement and directed attention to help you find easier, more effective
+                ways of doing what matters to you. You can expand your range of motion, improve
+                flexibility and coordination, and rediscover your natural capacity for graceful,
+                efficient movement. Because how you move is how you move through life, these changes
+                often carry over into your thinking, emotional balance, and problem solving.
               </p>
+              <p>
+                The Method draws on physics, biomechanics, and a practical understanding of how
+                humans learn and develop. As Moshe Feldenkrais put it, &ldquo;We move according to
+                our perceived self-image.&rdquo; As your awareness grows, habits and unnecessary
+                tension become visible, and new options appear. That sensitivity is what lets you
+                live more fully, efficiently, and comfortably.
+              </p>
+              <p className="text-foreground">There are two ways to experience the work.</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Pain that has not resolved",
-                  items: [
-                    "Neck, back, shoulder or hip pain that eased with treatment but never settled",
-                    "An old injury you have quietly worked around for years",
-                    "Stiffness that arrived after surgery and stayed",
-                    "Relief that keeps wearing off",
-                  ],
-                },
-                {
-                  title: "Balance and confidence",
-                  items: [
-                    "Footing that is not what it was on stairs or uneven ground",
-                    "Getting up from a chair or the floor now takes planning",
-                    "Turning to look behind you while driving",
-                    "The suspicion that this is just age, when much of it is habit",
-                  ],
-                },
-                {
-                  title: "Moving well, and better",
-                  items: [
-                    "Musicians, gardeners and desk workers with overuse strain",
-                    "Dancers, cyclists and martial artists stuck at a plateau",
-                    "Breathing that feels shallow or held",
-                    "Wanting range and coordination rather than more repetitions",
-                  ],
-                },
-              ].map((group) => (
-                <Card key={group.title} className="border-border/50 bg-card">
-                  <CardContent className="p-6 space-y-4">
-                    <h3 className="text-lg font-medium">{group.title}</h3>
-                    <ul className="space-y-3">
-                      {group.items.map((item) => (
-                        <li
-                          key={item}
-                          className="text-sm leading-relaxed text-muted-foreground pl-4 border-l border-primary/25"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Card className="border-border/50 bg-card">
+                <CardContent className="p-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      Awareness Through Movement<sup className="text-[10px]">&reg;</sup>
+                    </span>{" "}
+                    lessons are taught in a group, with students following the teacher&rsquo;s
+                    verbal guidance.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-border/50 bg-card">
+                <CardContent className="p-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      Functional Integration<sup className="text-[10px]">&reg;</sup>
+                    </span>{" "}
+                    sessions are one-on-one lessons in which the fully clothed student is guided
+                    through touch, movement, and words.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
