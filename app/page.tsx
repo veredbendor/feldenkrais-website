@@ -132,8 +132,8 @@ export default function Home() {
             <a href="#what" className="text-foreground/70 hover:text-foreground transition-colors">
               What it is
             </a>
-            <a href="#who" className="text-foreground/70 hover:text-foreground transition-colors">
-              Is this you
+            <a href="#method" className="text-foreground/70 hover:text-foreground transition-colors">
+              The Feldenkrais Method<sup>&reg;</sup>
             </a>
             <a href="#session" className="text-foreground/70 hover:text-foreground transition-colors">
               A session
@@ -220,11 +220,6 @@ export default function Home() {
                     any age.
                   </p>
                 </div>
-                <ul className="space-y-2 text-sm text-muted-foreground border-l-2 border-primary/30 pl-4">
-                  <li>Not a treatment, an adjustment, or an exercise program.</li>
-                  <li>No stretching, no holding positions, no strength required.</li>
-                  <li>You stay fully clothed on a low padded table.</li>
-                </ul>
               </div>
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
@@ -266,63 +261,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Is this you */}
-      <section id="who" className="py-12 md:py-16">
+      {/* The Feldenkrais Method */}
+      <section id="method" className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-8">
-            <div className="text-center space-y-3">
-              <h2 className="text-2xl md:text-3xl font-light">Is this you?</h2>
-              <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                People come to me for three broad reasons. You may recognize yourself in more
-                than one.
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-2xl md:text-3xl font-light text-center">
+              The Feldenkrais Method<sup className="text-sm">&reg;</sup>
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                The Feldenkrais Method<sup className="text-[10px]">&reg;</sup> of somatic education
+                uses gentle movement and directed attention to help you find easier, more effective
+                ways of doing what matters to you. You can expand your range of motion, improve
+                flexibility and coordination, and rediscover your natural capacity for graceful,
+                efficient movement. Because how you move is how you move through life, these changes
+                often carry over into your thinking, emotional balance, and problem solving.
               </p>
+              <p>
+                The Method draws on physics, biomechanics, and a practical understanding of how
+                humans learn and develop. As Moshe Feldenkrais put it, &ldquo;We move according to
+                our perceived self-image.&rdquo; As your awareness grows, habits and unnecessary
+                tension become visible, and new options appear. That sensitivity is what lets you
+                live more fully, efficiently, and comfortably.
+              </p>
+              <p className="text-foreground">There are two ways to experience the work.</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Pain that has not resolved",
-                  items: [
-                    "Neck, back, shoulder or hip pain that eased with treatment but never settled",
-                    "An old injury you have quietly worked around for years",
-                    "Stiffness that arrived after surgery and stayed",
-                    "Relief that keeps wearing off",
-                  ],
-                },
-                {
-                  title: "Balance and confidence",
-                  items: [
-                    "Footing that is not what it was on stairs or uneven ground",
-                    "Getting up from a chair or the floor now takes planning",
-                    "Turning to look behind you while driving",
-                    "The suspicion that this is just age, when much of it is habit",
-                  ],
-                },
-                {
-                  title: "Moving well, and better",
-                  items: [
-                    "Musicians, gardeners and desk workers with overuse strain",
-                    "Dancers, cyclists and martial artists stuck at a plateau",
-                    "Breathing that feels shallow or held",
-                    "Wanting range and coordination rather than more repetitions",
-                  ],
-                },
-              ].map((group) => (
-                <Card key={group.title} className="border-border/50 bg-card">
-                  <CardContent className="p-6 space-y-4">
-                    <h3 className="text-lg font-medium">{group.title}</h3>
-                    <ul className="space-y-3">
-                      {group.items.map((item) => (
-                        <li
-                          key={item}
-                          className="text-sm leading-relaxed text-muted-foreground pl-4 border-l border-primary/25"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Card className="border-border/50 bg-card">
+                <CardContent className="p-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      Awareness Through Movement<sup className="text-[10px]">&reg;</sup>
+                    </span>{" "}
+                    lessons are taught in a group, with students following the teacher&rsquo;s
+                    verbal guidance.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-border/50 bg-card">
+                <CardContent className="p-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      Functional Integration<sup className="text-[10px]">&reg;</sup>
+                    </span>{" "}
+                    sessions are one-on-one lessons in which the fully clothed student is guided
+                    through touch, movement, and words.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -414,6 +400,48 @@ export default function Home() {
                 <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
                   <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
                     <Image
+                      src="/images/robin-birdfeather.png"
+                      alt="Robin Birdfeather, Trigger Point Myotherapist"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <div
+                      className="flex gap-0.5 text-primary text-lg"
+                      role="img"
+                      aria-label="Rated 5 out of 5 stars"
+                    >
+                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
+                      me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
+                    </blockquote>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      As a trigger point myotherapist, I feel the profoundly calming, integrating,
+                      soft energy of the Feldenkrais process as a completion of the other body/mind
+                      treatments in my own healing. Working with Vered is a joy, and I am able to
+                      trust completely how the beautiful, soulfully slow pace brings me to a
+                      peaceful place. Those deeper, often hidden and stuck, encapsulated body
+                      experiences are given allowance and new freedom to let go, in a soft, flowing
+                      way that lasts.
+                    </p>
+                    <footer className="pt-2 border-t border-border">
+                      <p className="text-sm font-medium">Robin Birdfeather</p>
+                      <p className="text-xs text-muted-foreground">
+                        BA, MTPT (Trigger Point Myotherapist)
+                      </p>
+                    </footer>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-primary/20 bg-card shadow-md">
+              <CardContent className="p-6 md:p-8">
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
+                    <Image
                       src="/images/nelle-churchill.jpg"
                       alt="Nelle Churchill, Fascial Stretch Specialist"
                       fill
@@ -454,48 +482,6 @@ export default function Home() {
                       <p className="text-sm font-medium">Nelle Churchill</p>
                       <p className="text-xs text-muted-foreground">
                         Fascial Stretch Specialist, Re&middot;Fascia
-                      </p>
-                    </footer>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border border-primary/20 bg-card shadow-md">
-              <CardContent className="p-6 md:p-8">
-                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
-                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
-                    <Image
-                      src="/images/robin-birdfeather.png"
-                      alt="Robin Birdfeather, Trigger Point Myotherapist"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="space-y-4">
-                    <div
-                      className="flex gap-0.5 text-primary text-lg"
-                      role="img"
-                      aria-label="Rated 5 out of 5 stars"
-                    >
-                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    </div>
-                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                      &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
-                      me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
-                    </blockquote>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      As a trigger point myotherapist, I feel the profoundly calming, integrating,
-                      soft energy of the Feldenkrais process as a completion of the other body/mind
-                      treatments in my own healing. Working with Vered is a joy, and I am able to
-                      trust completely how the beautiful, soulfully slow pace brings me to a
-                      peaceful place. Those deeper, often hidden and stuck, encapsulated body
-                      experiences are given allowance and new freedom to let go, in a soft, flowing
-                      way that lasts.
-                    </p>
-                    <footer className="pt-2 border-t border-border">
-                      <p className="text-sm font-medium">Robin Birdfeather</p>
-                      <p className="text-xs text-muted-foreground">
-                        BA, MTPT (Trigger Point Myotherapist)
                       </p>
                     </footer>
                   </div>
