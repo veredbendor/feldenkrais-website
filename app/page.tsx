@@ -220,11 +220,6 @@ export default function Home() {
                     any age.
                   </p>
                 </div>
-                <ul className="space-y-2 text-sm text-muted-foreground border-l-2 border-primary/30 pl-4">
-                  <li>Not a treatment, an adjustment, or an exercise program.</li>
-                  <li>No stretching, no holding positions, no strength required.</li>
-                  <li>You stay fully clothed on a low padded table.</li>
-                </ul>
               </div>
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
