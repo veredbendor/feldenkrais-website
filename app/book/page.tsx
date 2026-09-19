@@ -93,7 +93,7 @@ export default function BookPage() {
                   </Button>
                 </div>
                 <p className="text-xs text-muted-foreground text-center">
-                  Not sure if this is right for you? Call {PHONE_DISPLAY} and ask. No charge, no pressure.
+                  Not sure if this is right for you? Call {PHONE_DISPLAY} and ask.
                 </p>
               </CardContent>
             </Card>

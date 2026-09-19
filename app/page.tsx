@@ -165,7 +165,7 @@ export default function Home() {
               Feldenkrais<sup>&reg;</sup> &middot; Rohnert Park, Sonoma County
             </p>
             <h1 className="text-4xl md:text-5xl font-light tracking-tight text-balance">
-              Move with less effort, and less pain
+              Move with more ease, and less pain
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Gentle one-to-one lessons in a quiet home studio in Rohnert Park. For pain that
@@ -183,8 +183,7 @@ export default function Home() {
               </Button>
             </div>
             <p className="text-xs text-muted-foreground">
-              Not sure if this is right for you? Call {PHONE_DISPLAY} and ask. No charge, no
-              pressure.
+              Not sure if this is right for you? Call {PHONE_DISPLAY} and ask.
             </p>
           </div>
         </div>
