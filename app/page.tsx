@@ -150,7 +150,7 @@ export default function Home() {
           </nav>
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              Book a lesson
+              Book a session
             </a>
           </Button>
         </div>
@@ -175,7 +175,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  Book a lesson
+                  Book a session
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary/30">
@@ -542,7 +542,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <Button asChild className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                      Book a lesson
+                      Book a session
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="flex-1 border-primary/30">
@@ -625,7 +625,7 @@ export default function Home() {
       <section id="book" className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-light">Book a lesson</h2>
+            <h2 className="text-2xl md:text-3xl font-light">Book a session</h2>
             <p className="text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
               Pick a time that works for you, or call first if you would rather talk it through.
               Rohnert Park, close to Cotati, Penngrove, Petaluma and south Santa Rosa.
