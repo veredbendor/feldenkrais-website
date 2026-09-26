@@ -159,7 +159,7 @@ export default function Home() {
       {/* Hero */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
             <Logo className="h-12 w-12 text-primary mx-auto" />
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-primary">
               Feldenkrais<sup>&reg;</sup> &middot; Rohnert Park, Sonoma County
@@ -176,7 +176,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="group rounded-full h-11 px-7 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+                className="group w-full sm:w-auto rounded-full h-11 px-7 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
               >
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   Book a session
@@ -200,7 +200,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="rounded-full h-11 px-7 border-primary/25 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+                className="w-full sm:w-auto rounded-full h-11 px-7 border-primary/25 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
               >
                 <a href={`tel:${PHONE_TEL}`}>Free 15-minute call</a>
               </Button>
@@ -311,7 +311,7 @@ export default function Home() {
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <Card className="border-primary/10 bg-card shadow-[var(--shadow-soft)]">
-                <CardContent className="p-5">
+                <CardContent className="p-4">
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     <span className="font-medium text-foreground">
                       Awareness Through Movement<sup className="text-[10px]">&reg;</sup>
@@ -322,7 +322,7 @@ export default function Home() {
                 </CardContent>
               </Card>
               <Card className="border-primary/10 bg-card shadow-[var(--shadow-soft)]">
-                <CardContent className="p-5">
+                <CardContent className="p-4">
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     <span className="font-medium text-foreground">
                       Functional Integration<sup className="text-[10px]">&reg;</sup>
