@@ -64,6 +64,8 @@ main, or the rewrite is lost.
   from the Card and Accordion patterns already on the page
 - The FAQPage JSON-LD is generated from the `FAQ` array in `app/page.tsx`.
   Edit the array, never the schema by hand
+- `.claude/skills/high-end-visual-design` is the visual reference for any
+  styling work. Follow it, and its project constraints apply
 
 ## Working in this repo
 
