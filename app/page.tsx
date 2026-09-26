@@ -148,7 +148,7 @@ export default function Home() {
               Questions
             </a>
           </nav>
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button asChild className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]">
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book a session
             </a>
@@ -157,28 +157,51 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section className="py-12 md:py-16">
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-5">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
             <Logo className="h-12 w-12 text-primary mx-auto" />
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-primary">
               Feldenkrais<sup>&reg;</sup> &middot; Rohnert Park, Sonoma County
             </p>
-            <h1 className="text-4xl md:text-5xl font-light tracking-tight text-balance">
+            <h1 className="text-4xl md:text-6xl font-light tracking-[-0.02em] leading-[1.05] text-balance">
               Move with more ease, and less pain
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Gentle one-to-one lessons in a quiet home studio in Rohnert Park. For pain that
               has not resolved, for balance you can trust, and for moving well at any age.
               Fully clothed, hands-on, never forced.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button
+                asChild
+                size="lg"
+                className="group rounded-full h-11 px-7 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+              >
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   Book a session
+                  <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="size-3.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary/30">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full h-11 px-7 border-primary/25 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+              >
                 <a href={`tel:${PHONE_TEL}`}>Free 15-minute call</a>
               </Button>
             </div>
@@ -190,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* What it is */}
-      <section id="what" className="py-12 md:py-16 bg-secondary/30">
+      <section id="what" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -238,7 +261,7 @@ export default function Home() {
       <section id="workshop" className="py-6">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between rounded-lg border border-border/60 bg-card/60 px-5 py-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between rounded-lg border border-primary/10 bg-card/60 shadow-[var(--shadow-soft)] px-5 py-4">
               <div className="space-y-1">
                 <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground">
                   Group class in Sebastopol
@@ -253,7 +276,7 @@ export default function Home() {
                   of being guided by hand.
                 </p>
               </div>
-              <Button variant="outline" className="border-primary/30 whitespace-nowrap" asChild>
+              <Button variant="outline" className="rounded-full border-primary/25 whitespace-nowrap transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]" asChild>
                 <Link href="/workshop">Learn more</Link>
               </Button>
             </div>
@@ -262,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* The Feldenkrais Method */}
-      <section id="method" className="py-12 md:py-16">
+      <section id="method" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-light text-center">
@@ -287,7 +310,7 @@ export default function Home() {
               <p className="text-foreground">There are two ways to experience the work.</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Card className="border-border/50 bg-card">
+              <Card className="border-primary/10 bg-card shadow-[var(--shadow-soft)]">
                 <CardContent className="p-5">
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     <span className="font-medium text-foreground">
@@ -298,7 +321,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-border/50 bg-card">
+              <Card className="border-primary/10 bg-card shadow-[var(--shadow-soft)]">
                 <CardContent className="p-5">
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     <span className="font-medium text-foreground">
@@ -315,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* A session, minute by minute */}
-      <section id="session" className="py-12 md:py-16 bg-secondary/30">
+      <section id="session" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="text-center space-y-3">
@@ -339,7 +362,7 @@ export default function Home() {
                   what: "You stand up and walk, and we see together what changed. I usually give you one small thing to play with at home. Nothing that needs discipline.",
                 },
               ].map((step) => (
-                <Card key={step.when} className="border-border/50 bg-card">
+                <Card key={step.when} className="border-primary/10 bg-card shadow-[var(--shadow-soft)]">
                   <CardContent className="p-6 grid sm:grid-cols-[140px_1fr] gap-4 items-start">
                     <p className="text-sm font-medium tracking-wide uppercase text-primary">
                       {step.when}
@@ -354,7 +377,7 @@ export default function Home() {
       </section>
 
       {/* What changes */}
-      <section className="py-12 md:py-16 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/feldenkrais-session-bg.png"
@@ -377,7 +400,7 @@ export default function Home() {
                 "Less pain, and less of the guarding that feeds it",
                 "More range in dance, sport and martial arts",
               ].map((benefit) => (
-                <Card key={benefit} className="border-border/50 bg-card/80 backdrop-blur-sm">
+                <Card key={benefit} className="border-primary/10 bg-card/80 backdrop-blur-sm shadow-[var(--shadow-soft)]">
                   <CardContent className="p-6 text-center">
                     <p className="text-base leading-relaxed">{benefit}</p>
                   </CardContent>
@@ -389,13 +412,13 @@ export default function Home() {
       </section>
 
       {/* Testimonial */}
-      <section id="testimonials" className="py-12">
+      <section id="testimonials" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
               What clients say
             </h2>
-            <Card className="border border-primary/20 bg-card shadow-md">
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
               <CardContent className="p-6 md:p-8">
                 <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
                   <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
@@ -437,7 +460,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border border-primary/20 bg-card shadow-md">
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
               <CardContent className="p-6 md:p-8">
                 <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
                   <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
@@ -493,13 +516,13 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-12 md:py-16 bg-secondary/30">
+      <section id="pricing" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-light text-center">
               What it costs, and how many you need
             </h2>
-            <Card className="border border-primary/20 bg-card shadow-md">
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
               <CardContent className="p-6 space-y-5">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
@@ -525,12 +548,33 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                  <Button asChild className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Button
+                    asChild
+                    className="group flex-1 rounded-full h-11 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+                  >
                     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                       Book a session
+                      <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="size-3.5"
+                          aria-hidden="true"
+                        >
+                          <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
+                      </span>
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border-primary/30">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="flex-1 rounded-full h-11 border-primary/25 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+                  >
                     <a href={`tel:${PHONE_TEL}`}>Free 15-minute call</a>
                   </Button>
                 </div>
@@ -541,7 +585,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-12 md:py-16">
+      <section id="faq" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="text-center space-y-3">
@@ -567,7 +611,7 @@ export default function Home() {
       </section>
 
       {/* Bio */}
-      <section id="bio" className="py-12 bg-secondary/30">
+      <section id="bio" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
@@ -607,7 +651,7 @@ export default function Home() {
       </section>
 
       {/* Booking */}
-      <section id="book" className="py-12 md:py-16">
+      <section id="book" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-2xl md:text-3xl font-light">Book a session</h2>
@@ -615,11 +659,29 @@ export default function Home() {
               Pick a time that works for you, or call first if you would rather talk it through.
               Rohnert Park, close to Cotati, Penngrove, Petaluma and south Santa Rosa.
             </p>
-            <Card className="border border-primary/20 bg-card shadow-md">
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
               <CardContent className="p-6 space-y-5">
-                <Button asChild size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button
+                  asChild
+                  size="lg"
+                  className="group w-full rounded-full h-11 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
+                >
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                     See available times
+                    <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="size-3.5"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </span>
                   </a>
                 </Button>
                 <div className="flex flex-col items-center gap-3">
