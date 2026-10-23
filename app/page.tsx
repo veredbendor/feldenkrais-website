@@ -135,9 +135,6 @@ export default function Home() {
             <a href="#method" className="text-foreground/70 hover:text-foreground transition-colors">
               The Feldenkrais Method<sup>&reg;</sup>
             </a>
-            <a href="#session" className="text-foreground/70 hover:text-foreground transition-colors">
-              A session
-            </a>
             <a href="#testimonials" className="text-foreground/70 hover:text-foreground transition-colors">
               Reviews
             </a>
@@ -337,40 +334,130 @@ export default function Home() {
         </div>
       </section>
 
-      {/* A session, minute by minute */}
-      <section id="session" className="py-16 md:py-24 bg-secondary/30">
+      {/* Testimonial */}
+      <section id="testimonials" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="text-center space-y-3">
-              <h2 className="text-2xl md:text-3xl font-light">What a lesson is like</h2>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Sixty minutes, one to one. Here is the whole thing, so nothing is a surprise.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {[
-                {
-                  when: "First 10 minutes",
-                  what: "We talk. What do you want to do more easily, and what gets in the way? I watch you do a few ordinary things, like standing up, turning, or reaching, so I can see how you currently organize yourself.",
-                },
-                {
-                  when: "The next 40",
-                  what: "You lie fully clothed on a low padded table, wider than a massage table. I move you slowly with my hands. Your job is not to help or analyze. It is only to notice where your bones are moving. Nothing is forced. Most people find it deeply restful.",
-                },
-                {
-                  when: "Last 10 minutes",
-                  what: "You stand up and walk, and we see together what changed. I usually give you one small thing to play with at home. Nothing that needs discipline.",
-                },
-              ].map((step) => (
-                <Card key={step.when} className="border-primary/10 bg-card shadow-[var(--shadow-soft)]">
-                  <CardContent className="p-6 grid sm:grid-cols-[140px_1fr] gap-4 items-start">
-                    <p className="text-sm font-medium tracking-wide uppercase text-primary">
-                      {step.when}
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
+              What clients say
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
+              <CardContent className="p-6 md:p-8 h-full">
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px] self-start">
+                    <Image
+                      src="/images/robin-birdfeather.png"
+                      alt="Robin Birdfeather, Trigger Point Myotherapist"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex h-full flex-col space-y-4">
+                    <div
+                      className="flex gap-0.5 text-primary text-lg"
+                      role="img"
+                      aria-label="Rated 5 out of 5 stars"
+                    >
+                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
+                      me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
+                    </blockquote>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      As a trigger point myotherapist, I feel the profoundly calming, integrating,
+                      soft energy of the Feldenkrais process as a completion of the other body/mind
+                      treatments in my own healing. Working with Vered is a joy, and I am able to
+                      trust completely how the beautiful, soulfully slow pace brings me to a
+                      peaceful place. Those deeper, often hidden and stuck, encapsulated body
+                      experiences are given allowance and new freedom to let go, in a soft, flowing
+                      way that lasts.
                     </p>
-                    <p className="text-base leading-relaxed text-muted-foreground">{step.what}</p>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div className="flex-1" aria-hidden="true" />
+                    <footer className="pt-4 border-t border-border">
+                      <p className="text-sm font-medium">Robin Birdfeather</p>
+                      <p className="text-xs text-muted-foreground">
+                        BA, MTPT (Trigger Point Myotherapist)
+                      </p>
+                    </footer>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
+              <CardContent className="p-6 md:p-8 h-full">
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px] self-start">
+                    <Image
+                      src="/images/nelle-churchill.jpg"
+                      alt="Nelle Churchill, Fascial Stretch Specialist"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex h-full flex-col space-y-4">
+                    <div
+                      className="flex gap-0.5 text-primary text-lg"
+                      role="img"
+                      aria-label="Rated 5 out of 5 stars"
+                    >
+                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;The session was so lovely. I felt very safe and very comfortable as
+                      Vered moved my body in ways that felt attuned and intentional.&rdquo;
+                    </blockquote>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      The movement felt very educational for my body and really boosted my
+                      proprioception and body awareness. I have noticed that I am more grounded on
+                      my feet. I have had ankle issues that began from a very bad sprain when I was
+                      13, and I am 30 now. I am walking differently and just feeling force move
+                      through my body differently. It is really amazing, and the change has been
+                      lasting.
+                    </p>
+                    <div className="flex-1" aria-hidden="true" />
+                    <footer className="pt-4 border-t border-border">
+                      <p className="text-sm font-medium">Nelle Churchill</p>
+                      <p className="text-xs text-muted-foreground">
+                        Fascial Stretch Specialist, Re&middot;Fascia
+                      </p>
+                    </footer>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
+              <CardContent className="p-6 md:p-8 h-full">
+                <div className="flex h-full flex-col space-y-4">
+                  <div
+                    className="flex gap-0.5 text-primary text-lg"
+                    role="img"
+                    aria-label="Rated 5 out of 5 stars"
+                  >
+                    <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                    &ldquo;Vered opened a door to something completely new for me. It was like a
+                    dialogue happening.&rdquo;
+                  </blockquote>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    She approached my body with regard for its intelligence and its integrity, and
+                    the subtleness and quietness of the work allowed for very careful listening and
+                    exploration. It was like a dialogue happening. I really experienced a sense of
+                    the consciousness of my body in a way I have never experienced before, a whole
+                    new way of approaching my body that felt really wonderful.
+                  </p>
+                  <div className="flex-1" aria-hidden="true" />
+                  <footer className="pt-4 border-t border-border">
+                    <p className="text-sm font-medium">Lauren Schneider</p>
+                    <p className="text-xs text-muted-foreground">
+                      Licensed Marriage and Family Therapist (LMFT)
+                    </p>
+                  </footer>
+                </div>
+              </CardContent>
+            </Card>
             </div>
           </div>
         </div>
@@ -407,110 +494,6 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section id="testimonials" className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl md:text-3xl font-light text-center mb-8">
-              What clients say
-            </h2>
-            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
-              <CardContent className="p-6 md:p-8">
-                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
-                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
-                    <Image
-                      src="/images/robin-birdfeather.png"
-                      alt="Robin Birdfeather, Trigger Point Myotherapist"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="space-y-4">
-                    <div
-                      className="flex gap-0.5 text-primary text-lg"
-                      role="img"
-                      aria-label="Rated 5 out of 5 stars"
-                    >
-                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    </div>
-                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                      &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
-                      me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
-                    </blockquote>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      As a trigger point myotherapist, I feel the profoundly calming, integrating,
-                      soft energy of the Feldenkrais process as a completion of the other body/mind
-                      treatments in my own healing. Working with Vered is a joy, and I am able to
-                      trust completely how the beautiful, soulfully slow pace brings me to a
-                      peaceful place. Those deeper, often hidden and stuck, encapsulated body
-                      experiences are given allowance and new freedom to let go, in a soft, flowing
-                      way that lasts.
-                    </p>
-                    <footer className="pt-2 border-t border-border">
-                      <p className="text-sm font-medium">Robin Birdfeather</p>
-                      <p className="text-xs text-muted-foreground">
-                        BA, MTPT (Trigger Point Myotherapist)
-                      </p>
-                    </footer>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
-              <CardContent className="p-6 md:p-8">
-                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
-                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
-                    <Image
-                      src="/images/nelle-churchill.jpg"
-                      alt="Nelle Churchill, Fascial Stretch Specialist"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="space-y-4">
-                    <div
-                      className="flex gap-0.5 text-primary text-lg"
-                      role="img"
-                      aria-label="Rated 5 out of 5 stars"
-                    >
-                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    </div>
-                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                      &ldquo;The session was so lovely. I felt very safe and very comfortable as
-                      Vered moved my body in ways that felt attuned and intentional.&rdquo;
-                    </blockquote>
-                    <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
-                      <p>
-                        The movement felt very educational for my body and really boosted my
-                        proprioception and body awareness. I have noticed that I am more grounded
-                        on my feet. I have had ankle issues that began from a very bad sprain when
-                        I was 13, and I am 30 now. I am walking differently and just feeling force
-                        move through my body differently. It is really amazing, and the change has
-                        been lasting.
-                      </p>
-                      <p>
-                        From my experience with Vered, I think Feldenkrais is a very beneficial
-                        modality. From a body awareness and neuromuscular reeducation standpoint, I
-                        feel a tremendous benefit, and I feel like my body is more intelligent with
-                        how it organizes force transmission through my joints. I&rsquo;m excited to
-                        experience more with Vered and deepen my body&rsquo;s understanding of
-                        movement.
-                      </p>
-                    </div>
-                    <footer className="pt-2 border-t border-border">
-                      <p className="text-sm font-medium">Nelle Churchill</p>
-                      <p className="text-xs text-muted-foreground">
-                        Fascial Stretch Specialist, Re&middot;Fascia
-                      </p>
-                    </footer>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
