@@ -511,6 +511,36 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)]">
+              <CardContent className="p-6 md:p-8">
+                <div className="space-y-4">
+                  <div
+                    className="flex gap-0.5 text-primary text-lg"
+                    role="img"
+                    aria-label="Rated 5 out of 5 stars"
+                  >
+                    <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                    &ldquo;Vered opened a door to something completely new for me. It was like a
+                    dialogue happening.&rdquo;
+                  </blockquote>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    She approached my body with regard for its intelligence and its integrity, and
+                    the subtleness and quietness of the work allowed for very careful listening and
+                    exploration. It was like a dialogue happening. I really experienced a sense of
+                    the consciousness of my body in a way I have never experienced before, a whole
+                    new way of approaching my body that felt really wonderful.
+                  </p>
+                  <footer className="pt-2 border-t border-border">
+                    <p className="text-sm font-medium">Lauren Schneider</p>
+                    <p className="text-xs text-muted-foreground">
+                      Licensed Marriage and Family Therapist (LMFT)
+                    </p>
+                  </footer>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
