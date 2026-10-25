@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
 import { BOOKING_URL } from "@/lib/site"
 
-export function SiteHeader() {
+export function SiteHeader({
+  cta = { label: "Book a session", href: BOOKING_URL },
+}: {
+  cta?: { label: string; href: string }
+}) {
+  const isExternal = cta.href.startsWith("http")
   return (
     <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -43,9 +48,13 @@ export function SiteHeader() {
           asChild
           className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
         >
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Book a session
-          </a>
+          {isExternal ? (
+            <a href={cta.href} target="_blank" rel="noopener noreferrer">
+              {cta.label}
+            </a>
+          ) : (
+            <a href={cta.href}>{cta.label}</a>
+          )}
         </Button>
       </div>
     </header>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function WorkshopPage() {
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
+      <SiteHeader cta={{ label: "Register", href: "#register" }} />
 
       {/* Hero */}
       <section className="py-10 md:py-14">
