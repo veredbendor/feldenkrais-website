@@ -1,9 +1,8 @@
 import type { Metadata } from "next"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Logo } from "@/components/logo"
 import Image from "next/image"
-import Link from "next/link"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 import { RegistrationForm } from "./registration-form"
 
 export const metadata: Metadata = {
@@ -15,29 +14,7 @@ export const metadata: Metadata = {
 export default function WorkshopPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Logo className="h-10 w-10 text-primary" />
-            <span className="text-xl font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#about" className="text-foreground/70 hover:text-foreground transition-colors">
-              About
-            </Link>
-            <Link href="/#offerings" className="text-foreground/70 hover:text-foreground transition-colors">
-              Offerings
-            </Link>
-            <Link href="/#bio" className="text-foreground/70 hover:text-foreground transition-colors">
-              Bio
-            </Link>
-          </nav>
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="#register">Register</a>
-          </Button>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero */}
       <section className="py-10 md:py-14">
@@ -249,17 +226,7 @@ export default function WorkshopPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border/50 py-4 bg-card/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center space-y-2">
-            <p className="text-sm font-medium">FELDENKRAIS<sup className="text-[8px]">®</sup></p>
-            <p className="text-xs text-muted-foreground">
-              © 2026 Vered Ben-Dor. Feldenkrais® is a registered service mark of the Feldenkrais Guild® of North America.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
