@@ -15,6 +15,13 @@ const TITLE = "Feldenkrais in Rohnert Park, Sonoma County | Vered Ben-Dor, GCFP"
 const DESCRIPTION =
   "Gentle one-to-one Feldenkrais lessons in Rohnert Park for pain that has not resolved, balance, and ease of movement. Fully clothed, hands-on, never forced. Certified since 1994."
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE,
@@ -63,6 +70,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${crimsonPro.className} antialiased`}>
+        {/* JSON-LD: static schema with no <, >, or & so React text escaping is a no-op */}
+        <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
         {children}
         <Analytics />
       </body>

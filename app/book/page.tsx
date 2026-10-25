@@ -1,42 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Logo } from "@/components/logo"
 import Image from "next/image"
-import Link from "next/link"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site"
 
 export default function BookPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Logo className="h-10 w-10 text-primary" />
-            <span className="text-xl font-semibold">FELDENKRAIS<sup className="text-xs">®</sup></span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/#what" className="text-foreground/70 hover:text-foreground transition-colors">
-              What it is
-            </Link>
-            <Link href="/#who" className="text-foreground/70 hover:text-foreground transition-colors">
-              Is this you
-            </Link>
-            <Link href="/#session" className="text-foreground/70 hover:text-foreground transition-colors">
-              A session
-            </Link>
-            <Link href="/#pricing" className="text-foreground/70 hover:text-foreground transition-colors">
-              Pricing
-            </Link>
-            <Link href="/#faq" className="text-foreground/70 hover:text-foreground transition-colors">
-              Questions
-            </Link>
-          </nav>
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Session</a>
-          </Button>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero Section */}
       <section className="py-10 md:py-14">
@@ -114,24 +86,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border/50 py-6 bg-card/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center space-y-2">
-            <p className="text-sm font-medium">
-              FELDENKRAIS<sup className="text-[8px]">&reg;</sup>
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Sonoma Feldenkrais &middot; Rohnert Park, Sonoma County, California &middot;{" "}
-              {PHONE_DISPLAY}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              &copy; 2026 Vered Ben-Dor. Feldenkrais&reg; is a registered service mark of the
-              Feldenkrais Guild&reg; of North America.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
