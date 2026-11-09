@@ -35,7 +35,16 @@ const localBusinessSchema = {
     addressRegion: "CA",
     addressCountry: "US",
   },
-  areaServed: ["Rohnert Park", "Cotati", "Penngrove", "Petaluma", "Santa Rosa"],
+  areaServed: [
+    "Rohnert Park",
+    "Cotati",
+    "Petaluma",
+    "Santa Rosa",
+    "Sebastopol",
+    "Sonoma",
+    "Novato",
+    "Penngrove",
+  ],
   potentialAction: {
     "@type": "ReserveAction",
     target: BOOKING_URL,
@@ -199,6 +208,49 @@ export default function Home() {
               What clients say
             </h2>
             <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
+              <CardContent className="p-6 md:p-8 h-full">
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px] self-start">
+                    <Image
+                      src="/images/amy-sparrow.jpg"
+                      alt="Dr. Amy Sparrow, Acupuncturist"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex h-full flex-col space-y-4">
+                    <div
+                      className="flex gap-0.5 text-primary text-lg"
+                      role="img"
+                      aria-label="Rated 5 out of 5 stars"
+                    >
+                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                      &ldquo;After one session, my left leg felt more fully planted on the ground,
+                      and my knees had a new ease and range of motion in tai chi.&rdquo;
+                    </blockquote>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      Vered&rsquo;s technique is just right: gentle, slow movements and a firm, sure
+                      touch. At the start of the session she went directly to my left knee, my one
+                      hanging-on impact injury from 30 years ago! She astutely combined skilled
+                      observation with sensing. Afterward my whole body felt looser and my nervous
+                      system felt deeply relaxed. I could really feel the change, and it felt good.
+                      I look forward to more sessions, to going deeper and letting the change last
+                      longer.
+                    </p>
+                    <div className="flex-1" aria-hidden="true" />
+                    <footer className="pt-4 border-t border-border">
+                      <p className="text-sm font-medium">Dr. Amy Sparrow</p>
+                      <p className="text-xs text-muted-foreground">
+                        LAc, DAOM, Revive Acupuncture and Herbal Medicine
+                      </p>
+                    </footer>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
               <CardContent className="p-6 md:p-8 h-full">
                 <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
