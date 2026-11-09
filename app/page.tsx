@@ -213,7 +213,7 @@ export default function Home() {
                 <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
                   <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px] self-start">
                     <Image
-                      src="/images/amy-sparrow.jpg"
+                      src="/images/amy-sparrow.png"
                       alt="Dr. Amy Sparrow, Acupuncturist"
                       fill
                       className="object-cover"
