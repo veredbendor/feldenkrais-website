@@ -35,7 +35,16 @@ const localBusinessSchema = {
     addressRegion: "CA",
     addressCountry: "US",
   },
-  areaServed: ["Rohnert Park", "Cotati", "Penngrove", "Petaluma", "Santa Rosa"],
+  areaServed: [
+    "Rohnert Park",
+    "Cotati",
+    "Petaluma",
+    "Santa Rosa",
+    "Sebastopol",
+    "Sonoma",
+    "Novato",
+    "Penngrove",
+  ],
   potentialAction: {
     "@type": "ReserveAction",
     target: BOOKING_URL,
@@ -201,86 +210,135 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-6 items-stretch">
             <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
               <CardContent className="p-6 md:p-8 h-full">
-                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
-                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px] self-start">
-                    <Image
-                      src="/images/robin-birdfeather.png"
-                      alt="Robin Birdfeather, Trigger Point Myotherapist"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex h-full flex-col space-y-4">
-                    <div
-                      className="flex gap-0.5 text-primary text-lg"
-                      role="img"
-                      aria-label="Rated 5 out of 5 stars"
-                    >
-                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <div className="flex h-full flex-col space-y-4">
+                  <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
+                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
+                      <Image
+                        src="/images/amy-sparrow.png"
+                        alt="Dr. Amy Sparrow, Acupuncturist"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                      &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
-                      me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
-                    </blockquote>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
-                      As a trigger point myotherapist, I feel the profoundly calming, integrating,
-                      soft energy of the Feldenkrais process as a completion of the other body/mind
-                      treatments in my own healing. Working with Vered is a joy, and I am able to
-                      trust completely how the beautiful, soulfully slow pace brings me to a
-                      peaceful place. Those deeper, often hidden and stuck, encapsulated body
-                      experiences are given allowance and new freedom to let go, in a soft, flowing
-                      way that lasts.
-                    </p>
-                    <div className="flex-1" aria-hidden="true" />
-                    <footer className="pt-4 border-t border-border">
-                      <p className="text-sm font-medium">Robin Birdfeather</p>
-                      <p className="text-xs text-muted-foreground">
-                        BA, MTPT (Trigger Point Myotherapist)
-                      </p>
-                    </footer>
+                    <div className="flex flex-col space-y-4">
+                      <div
+                        className="flex gap-0.5 text-primary text-lg"
+                        role="img"
+                        aria-label="Rated 5 out of 5 stars"
+                      >
+                        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      </div>
+                      <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                        &ldquo;After one session, my left leg felt more fully planted on the ground,
+                        and my knees had a new ease and range of motion in tai chi.&rdquo;
+                      </blockquote>
+                    </div>
                   </div>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    Vered&rsquo;s technique is just right: gentle, slow movements and a firm, sure
+                    touch. At the start of the session she went directly to my left knee, my one
+                    hanging-on impact injury from 30 years ago! She astutely combined skilled
+                    observation with sensing. Afterward my whole body felt looser and my nervous
+                    system felt deeply relaxed. I could really feel the change, and it felt good.
+                    I look forward to more sessions, to going deeper and letting the change last
+                    longer.
+                  </p>
+                  <div className="flex-1" aria-hidden="true" />
+                  <footer className="pt-4 border-t border-border">
+                    <p className="text-sm font-medium">Dr. Amy Sparrow</p>
+                    <p className="text-xs text-muted-foreground">
+                      LAc, DAOM, Revive Acupuncture and Herbal Medicine
+                    </p>
+                  </footer>
                 </div>
               </CardContent>
             </Card>
             <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
               <CardContent className="p-6 md:p-8 h-full">
-                <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 h-full">
-                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px] self-start">
-                    <Image
-                      src="/images/nelle-churchill.jpg"
-                      alt="Nelle Churchill, Fascial Stretch Specialist"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex h-full flex-col space-y-4">
-                    <div
-                      className="flex gap-0.5 text-primary text-lg"
-                      role="img"
-                      aria-label="Rated 5 out of 5 stars"
-                    >
-                      <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <div className="flex h-full flex-col space-y-4">
+                  <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
+                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
+                      <Image
+                        src="/images/robin-birdfeather.png"
+                        alt="Robin Birdfeather, Trigger Point Myotherapist"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
-                      &ldquo;The session was so lovely. I felt very safe and very comfortable as
-                      Vered moved my body in ways that felt attuned and intentional.&rdquo;
-                    </blockquote>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
-                      The movement felt very educational for my body and really boosted my
-                      proprioception and body awareness. I have noticed that I am more grounded on
-                      my feet. I have had ankle issues that began from a very bad sprain when I was
-                      13, and I am 30 now. I am walking differently and just feeling force move
-                      through my body differently. It is really amazing, and the change has been
-                      lasting.
-                    </p>
-                    <div className="flex-1" aria-hidden="true" />
-                    <footer className="pt-4 border-t border-border">
-                      <p className="text-sm font-medium">Nelle Churchill</p>
-                      <p className="text-xs text-muted-foreground">
-                        Fascial Stretch Specialist, Re&middot;Fascia
-                      </p>
-                    </footer>
+                    <div className="flex flex-col space-y-4">
+                      <div
+                        className="flex gap-0.5 text-primary text-lg"
+                        role="img"
+                        aria-label="Rated 5 out of 5 stars"
+                      >
+                        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      </div>
+                      <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                        &ldquo;Working with Vered is a joy. The beautiful, soulfully slow pace brings
+                        me to a peaceful place. On a scale of 10, I feel an 11.&rdquo;
+                      </blockquote>
+                    </div>
                   </div>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    As a trigger point myotherapist, I feel the profoundly calming, integrating,
+                    soft energy of the Feldenkrais process as a completion of the other body/mind
+                    treatments in my own healing. Working with Vered is a joy, and I am able to
+                    trust completely how the beautiful, soulfully slow pace brings me to a
+                    peaceful place. Those deeper, often hidden and stuck, encapsulated body
+                    experiences are given allowance and new freedom to let go, in a soft, flowing
+                    way that lasts.
+                  </p>
+                  <div className="flex-1" aria-hidden="true" />
+                  <footer className="pt-4 border-t border-border">
+                    <p className="text-sm font-medium">Robin Birdfeather</p>
+                    <p className="text-xs text-muted-foreground">
+                      BA, MTPT (Trigger Point Myotherapist)
+                    </p>
+                  </footer>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-primary/10 bg-card shadow-[var(--shadow-soft)] h-full">
+              <CardContent className="p-6 md:p-8 h-full">
+                <div className="flex h-full flex-col space-y-4">
+                  <div className="grid sm:grid-cols-[140px_1fr] gap-6 md:gap-8 items-start">
+                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden mx-auto sm:mx-0 w-full max-w-[140px]">
+                      <Image
+                        src="/images/nelle-churchill.jpg"
+                        alt="Nelle Churchill, Fascial Stretch Specialist"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col space-y-4">
+                      <div
+                        className="flex gap-0.5 text-primary text-lg"
+                        role="img"
+                        aria-label="Rated 5 out of 5 stars"
+                      >
+                        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      </div>
+                      <blockquote className="text-lg md:text-xl font-light leading-relaxed text-balance">
+                        &ldquo;The session was so lovely. I felt very safe and very comfortable as
+                        Vered moved my body in ways that felt attuned and intentional.&rdquo;
+                      </blockquote>
+                    </div>
+                  </div>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    The movement felt very educational for my body and really boosted my
+                    proprioception and body awareness. I have noticed that I am more grounded on
+                    my feet. I have had ankle issues that began from a very bad sprain when I was
+                    13, and I am 30 now. I am walking differently and just feeling force move
+                    through my body differently. It is really amazing, and the change has been
+                    lasting.
+                  </p>
+                  <div className="flex-1" aria-hidden="true" />
+                  <footer className="pt-4 border-t border-border">
+                    <p className="text-sm font-medium">Nelle Churchill</p>
+                    <p className="text-xs text-muted-foreground">
+                      Fascial Stretch Specialist, Re&middot;Fascia
+                    </p>
+                  </footer>
                 </div>
               </CardContent>
             </Card>
