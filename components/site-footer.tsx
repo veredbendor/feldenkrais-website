@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BOOKING_URL, PHONE_DISPLAY } from "@/lib/site"
+import { PHONE_DISPLAY } from "@/lib/site"
 
 export function SiteFooter() {
   return (
@@ -28,14 +28,9 @@ export function SiteFooter() {
             <Link href="/workshop" className="hover:text-foreground transition-colors">
               Group class
             </Link>
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
-            >
+            <Link href="/book" className="hover:text-foreground transition-colors">
               Book a session
-            </a>
+            </Link>
           </nav>
           <p className="text-xs text-muted-foreground">
             Sonoma Feldenkrais &middot; Rohnert Park, Sonoma County, California &middot;{" "}

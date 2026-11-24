@@ -1,7 +1,8 @@
 import type { ElementType } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BOOKING_URL, PHONE_TEL } from "@/lib/site"
+import { PHONE_TEL } from "@/lib/site"
 
 export function PricingSection({ as: Heading = "h2" }: { as?: ElementType }) {
   return (
@@ -41,7 +42,7 @@ export function PricingSection({ as: Heading = "h2" }: { as?: ElementType }) {
                   asChild
                   className="group flex-1 rounded-full h-11 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
                 >
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  <Link href="/book">
                     Book a session
                     <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
                       <svg
@@ -57,7 +58,7 @@ export function PricingSection({ as: Heading = "h2" }: { as?: ElementType }) {
                         <path d="M5 12h14M13 6l6 6-6 6" />
                       </svg>
                     </span>
-                  </a>
+                  </Link>
                 </Button>
                 <Button
                   asChild

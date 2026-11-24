@@ -1,5 +1,6 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site"
+import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/site"
 
 export function PrimaryCta() {
   return (
@@ -10,7 +11,7 @@ export function PrimaryCta() {
           size="lg"
           className="group w-full sm:w-auto rounded-full h-11 px-7 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
         >
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+          <Link href="/book">
             Book a session
             <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
               <svg
@@ -26,7 +27,7 @@ export function PrimaryCta() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </span>
-          </a>
+          </Link>
         </Button>
         <Button
           asChild

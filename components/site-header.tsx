@@ -1,10 +1,9 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
-import { BOOKING_URL } from "@/lib/site"
 
 export function SiteHeader({
-  cta = { label: "Book a session", href: BOOKING_URL },
+  cta = { label: "Book a session", href: "/book" },
 }: {
   cta?: { label: string; href: string }
 }) {

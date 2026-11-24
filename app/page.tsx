@@ -83,7 +83,7 @@ export default function Home() {
                 size="lg"
                 className="group w-full sm:w-auto rounded-full h-11 px-7 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
               >
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                <Link href="/book">
                   Book a session
                   <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
                     <svg
@@ -99,7 +99,7 @@ export default function Home() {
                       <path d="M5 12h14M13 6l6 6-6 6" />
                     </svg>
                   </span>
-                </a>
+                </Link>
               </Button>
               <Button
                 asChild
@@ -438,7 +438,7 @@ export default function Home() {
                   size="lg"
                   className="group w-full rounded-full h-11 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.99]"
                 >
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  <Link href="/book">
                     See available times
                     <span className="flex size-6 items-center justify-center rounded-full bg-primary-foreground/15 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
                       <svg
@@ -454,7 +454,7 @@ export default function Home() {
                         <path d="M5 12h14M13 6l6 6-6 6" />
                       </svg>
                     </span>
-                  </a>
+                  </Link>
                 </Button>
                 <div className="flex flex-col items-center gap-3">
                   <div className="relative w-28 h-28 rounded overflow-hidden border border-primary/10 bg-white p-1">
