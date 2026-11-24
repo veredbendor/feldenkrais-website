@@ -26,6 +26,12 @@ export function SiteHeader({
             What is Feldenkrais
           </Link>
           <Link
+            href="/try"
+            className="text-foreground/70 hover:text-foreground transition-colors"
+          >
+            Try it
+          </Link>
+          <Link
             href="/pricing"
             className="text-foreground/70 hover:text-foreground transition-colors"
           >

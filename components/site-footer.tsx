@@ -13,6 +13,9 @@ export function SiteFooter() {
             <Link href="/what-is-feldenkrais" className="hover:text-foreground transition-colors">
               What is Feldenkrais
             </Link>
+            <Link href="/try" className="hover:text-foreground transition-colors">
+              Try it
+            </Link>
             <Link href="/pricing" className="hover:text-foreground transition-colors">
               Pricing
             </Link>
